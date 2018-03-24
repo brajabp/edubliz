@@ -1,0 +1,65 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myOrganizationLabel" jhiTranslate="eduApp.organization.home.createOrEditLabel">Create or edit a Organization</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!organization.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="organization.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.organization.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="organization.name" required/>
+            <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.organization.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="organization.status" id="field_status" >
+                <option value="ACTIVE">{{'eduApp.Status.ACTIVE' | translate}}</option>
+                <option value="INACTIVE">{{'eduApp.Status.INACTIVE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.organization.accountStatus" for="field_accountStatus">Account Status</label>
+            <select class="form-control" name="accountStatus" [(ngModel)]="organization.accountStatus" id="field_accountStatus" >
+                <option value="PENDING">{{'eduApp.AccountStatus.PENDING' | translate}}</option>
+                <option value="SUBSCRIBED">{{'eduApp.AccountStatus.SUBSCRIBED' | translate}}</option>
+                <option value="UNSUBSCRIBED">{{'eduApp.AccountStatus.UNSUBSCRIBED' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.organization.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="organization.createDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.organization.modDate" for="field_modDate">Mod Date</label>
+            <div class="d-flex">
+                <input id="field_modDate" type="datetime-local" class="form-control" name="modDate" [(ngModel)]="organization.modDate"
+                />
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

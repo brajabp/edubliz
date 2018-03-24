@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "enquiry" : {
+            "home": {
+                "title": "Enquiries",
+                "createLabel": "नवीन Enquiry तयार करा",
+                "createOrEditLabel": "Enquiry तयार किंवा संपादित करा"
+            },
+            "created": "Enquiry [identifier: {{ param }}] तयार आहे",
+            "updated": "Enquiry [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Enquiry [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Enquiry [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Enquiry"
+            },
+            "enquiryDate": "Enquiry Date",
+            "comment": "Comment",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "followUp": "Follow Up",
+            "organization": "Organization",
+            "student": "Student"
+        }
+    }
+}

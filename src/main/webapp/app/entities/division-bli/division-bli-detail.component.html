@@ -1,0 +1,48 @@
+
+<div *ngIf="division">
+    <h2><span jhiTranslate="eduApp.division.detail.title">Division</span> {{division.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.division.name">Name</span></dt>
+        <dd>
+            <span>{{division.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.division.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + division.status}}">{{division.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.division.accountStatus">Account Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.AccountStatus.' + division.accountStatus}}">{{division.accountStatus}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.division.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{division.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.division.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{division.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.division.organization">Organization</span></dt>
+        <dd>
+            <div *ngIf="division.organizationId">
+                <a [routerLink]="['/organization-bli', division.organizationId]">{{division.organizationId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'division-bli/'+ division.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

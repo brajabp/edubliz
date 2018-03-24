@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "organization" : {
+            "home": {
+                "title": "Organizations",
+                "createLabel": "नवीन Organization तयार करा",
+                "createOrEditLabel": "Organization तयार किंवा संपादित करा"
+            },
+            "created": "Organization [identifier: {{ param }}] तयार आहे",
+            "updated": "Organization [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Organization [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Organization [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Organization"
+            },
+            "name": "Name",
+            "status": "Status",
+            "accountStatus": "Account Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "division": "Division",
+            "payment": "Payment",
+            "enquiry": "Enquiry",
+            "course": "Course",
+            "student": "Student",
+            "employee": "Employee"
+        }
+    }
+}

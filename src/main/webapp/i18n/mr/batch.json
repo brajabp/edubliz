@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "batch" : {
+            "home": {
+                "title": "Batches",
+                "createLabel": "नवीन Batch तयार करा",
+                "createOrEditLabel": "Batch तयार किंवा संपादित करा"
+            },
+            "created": "Batch [identifier: {{ param }}] तयार आहे",
+            "updated": "Batch [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Batch [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Batch [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Batch"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "sudentCapacity": "Sudent Capacity",
+            "schedule": "Schedule",
+            "enroll": "Enroll",
+            "subject": "Subject",
+            "student": "Student",
+            "employee": "Employee"
+        }
+    }
+}

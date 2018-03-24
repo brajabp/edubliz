@@ -1,0 +1,10 @@
+{
+    "eduApp": {
+        "AccountStatus" : {
+            "null": "",
+            "PENDING": "PENDING",
+            "SUBSCRIBED": "SUBSCRIBED",
+            "UNSUBSCRIBED": "UNSUBSCRIBED"
+        }
+    }
+}

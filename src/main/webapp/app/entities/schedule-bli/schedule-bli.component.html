@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.schedule.home.title">Schedules</span>
+        <button class="btn btn-primary float-right jh-create-entity create-schedule-bli" [routerLink]="['/', { outlets: { popup: ['schedule-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.schedule.home.createLabel">
+            Create new Schedule
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="schedules">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="eduApp.schedule.status">Status</span></th>
+            <th><span jhiTranslate="eduApp.schedule.createDate">Create Date</span></th>
+            <th><span jhiTranslate="eduApp.schedule.modDate">Mod Date</span></th>
+            <th><span jhiTranslate="eduApp.schedule.plannedDate">Planned Date</span></th>
+            <th><span jhiTranslate="eduApp.schedule.plannedDuration">Planned Duration</span></th>
+            <th><span jhiTranslate="eduApp.schedule.batch">Batch</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let schedule of schedules ;trackBy: trackId">
+                <td><a [routerLink]="['../schedule-bli', schedule.id ]">{{schedule.id}}</a></td>
+                <td jhiTranslate="{{'eduApp.Status.' + schedule.status}}">{{schedule.status}}</td>
+                <td>{{schedule.createDate | date:'medium'}}</td>
+                <td>{{schedule.modDate | date:'medium'}}</td>
+                <td>{{schedule.plannedDate}}</td>
+                <td>{{schedule.plannedDuration}}</td>
+                <td>
+                    <div *ngIf="schedule.batchId">
+                        <a [routerLink]="['../batch-bli', schedule.batchId  ]" >{{schedule.batchId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../schedule-bli', schedule.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'schedule-bli/'+ schedule.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'schedule-bli/'+ schedule.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

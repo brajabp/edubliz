@@ -1,0 +1,72 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.division.home.title">Divisions</span>
+        <button class="btn btn-primary float-right jh-create-entity create-division-bli" [routerLink]="['/', { outlets: { popup: ['division-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.division.home.createLabel">
+            Create new Division
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="divisions">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="eduApp.division.name">Name</span></th>
+            <th><span jhiTranslate="eduApp.division.status">Status</span></th>
+            <th><span jhiTranslate="eduApp.division.accountStatus">Account Status</span></th>
+            <th><span jhiTranslate="eduApp.division.createDate">Create Date</span></th>
+            <th><span jhiTranslate="eduApp.division.modDate">Mod Date</span></th>
+            <th><span jhiTranslate="eduApp.division.organization">Organization</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let division of divisions ;trackBy: trackId">
+                <td><a [routerLink]="['../division-bli', division.id ]">{{division.id}}</a></td>
+                <td>{{division.name}}</td>
+                <td jhiTranslate="{{'eduApp.Status.' + division.status}}">{{division.status}}</td>
+                <td jhiTranslate="{{'eduApp.AccountStatus.' + division.accountStatus}}">{{division.accountStatus}}</td>
+                <td>{{division.createDate | date:'medium'}}</td>
+                <td>{{division.modDate | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="division.organizationId">
+                        <a [routerLink]="['../organization-bli', division.organizationId  ]" >{{division.organizationId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../division-bli', division.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'division-bli/'+ division.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'division-bli/'+ division.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{
+    "eduApp": {
+        "Status" : {
+            "null": "",
+            "ACTIVE": "ACTIVE",
+            "INACTIVE": "INACTIVE"
+        }
+    }
+}

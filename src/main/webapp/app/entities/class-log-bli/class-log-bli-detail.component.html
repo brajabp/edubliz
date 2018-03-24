@@ -1,0 +1,56 @@
+
+<div *ngIf="classLog">
+    <h2><span jhiTranslate="eduApp.classLog.detail.title">Class Log</span> {{classLog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.classLog.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + classLog.status}}">{{classLog.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{classLog.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{classLog.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.actualDate">Actual Date</span></dt>
+        <dd>
+            <span>{{classLog.actualDate}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.actualDuration">Actual Duration</span></dt>
+        <dd>
+            <span>{{classLog.actualDuration}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.sudentPresent">Sudent Present</span></dt>
+        <dd>
+            <span>{{classLog.sudentPresent}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.logType">Log Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.LogType.' + classLog.logType}}">{{classLog.logType}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.classLog.classroom">Classroom</span></dt>
+        <dd>
+            <div *ngIf="classLog.classroomId">
+                <a [routerLink]="['/classroom-bli', classLog.classroomId]">{{classLog.classroomId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'class-log-bli/'+ classLog.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,78 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.enquiry.home.title">Enquiries</span>
+        <button class="btn btn-primary float-right jh-create-entity create-enquiry-bli" [routerLink]="['/', { outlets: { popup: ['enquiry-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.enquiry.home.createLabel">
+            Create new Enquiry
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="enquiries">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="enquiryDate"><span jhiTranslate="eduApp.enquiry.enquiryDate">Enquiry Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="comment"><span jhiTranslate="eduApp.enquiry.comment">Comment</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="phone"><span jhiTranslate="eduApp.enquiry.phone">Phone</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="email"><span jhiTranslate="eduApp.enquiry.email">Email</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="address"><span jhiTranslate="eduApp.enquiry.address">Address</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="organizationId"><span jhiTranslate="eduApp.enquiry.organization">Organization</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="studentId"><span jhiTranslate="eduApp.enquiry.student">Student</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let enquiry of enquiries ;trackBy: trackId">
+                <td><a [routerLink]="['../enquiry-bli', enquiry.id ]">{{enquiry.id}}</a></td>
+                <td>{{enquiry.enquiryDate | date:'medium'}}</td>
+                <td>{{enquiry.comment}}</td>
+                <td>{{enquiry.phone}}</td>
+                <td>{{enquiry.email}}</td>
+                <td>{{enquiry.address}}</td>
+                <td>
+                    <div *ngIf="enquiry.organizationId">
+                        <a [routerLink]="['../organization-bli', enquiry.organizationId  ]" >{{enquiry.organizationId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="enquiry.studentId">
+                        <a [routerLink]="['../student-bli', enquiry.studentId  ]" >{{enquiry.studentId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../enquiry-bli', enquiry.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enquiry-bli/'+ enquiry.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enquiry-bli/'+ enquiry.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

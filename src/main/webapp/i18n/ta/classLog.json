@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "classLog" : {
+            "home": {
+                "title": "Class Logs",
+                "createLabel": "Class Log-ஐ உருவாக்கு",
+                "createOrEditLabel": "Class Log -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Class Log புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Class Log மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Class Log நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Class Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Log"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "actualDate": "Actual Date",
+            "actualDuration": "Actual Duration",
+            "sudentPresent": "Sudent Present",
+            "logType": "Log Type",
+            "classroom": "Classroom"
+        }
+    }
+}

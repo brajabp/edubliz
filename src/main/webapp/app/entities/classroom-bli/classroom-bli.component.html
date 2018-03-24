@@ -1,0 +1,74 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.classroom.home.title">Classrooms</span>
+        <button class="btn btn-primary float-right jh-create-entity create-classroom-bli" [routerLink]="['/', { outlets: { popup: ['classroom-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.classroom.home.createLabel">
+            Create new Classroom
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="classrooms">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="eduApp.classroom.status">Status</span></th>
+            <th><span jhiTranslate="eduApp.classroom.createDate">Create Date</span></th>
+            <th><span jhiTranslate="eduApp.classroom.modDate">Mod Date</span></th>
+            <th><span jhiTranslate="eduApp.classroom.actualDate">Actual Date</span></th>
+            <th><span jhiTranslate="eduApp.classroom.actualDuration">Actual Duration</span></th>
+            <th><span jhiTranslate="eduApp.classroom.sudentPresent">Sudent Present</span></th>
+            <th><span jhiTranslate="eduApp.classroom.schedule">Schedule</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let classroom of classrooms ;trackBy: trackId">
+                <td><a [routerLink]="['../classroom-bli', classroom.id ]">{{classroom.id}}</a></td>
+                <td jhiTranslate="{{'eduApp.Status.' + classroom.status}}">{{classroom.status}}</td>
+                <td>{{classroom.createDate | date:'medium'}}</td>
+                <td>{{classroom.modDate | date:'medium'}}</td>
+                <td>{{classroom.actualDate}}</td>
+                <td>{{classroom.actualDuration}}</td>
+                <td>{{classroom.sudentPresent}}</td>
+                <td>
+                    <div *ngIf="classroom.scheduleId">
+                        <a [routerLink]="['../schedule-bli', classroom.scheduleId  ]" >{{classroom.scheduleId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../classroom-bli', classroom.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'classroom-bli/'+ classroom.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'classroom-bli/'+ classroom.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

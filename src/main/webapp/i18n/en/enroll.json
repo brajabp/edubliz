@@ -1,0 +1,28 @@
+
+{
+    "eduApp": {
+        "enroll" : {
+            "home": {
+                "title": "Enrolls",
+                "createLabel": "Create a new Enroll",
+                "createOrEditLabel": "Create or edit a Enroll"
+            },
+            "created": "A new Enroll is created with identifier {{ param }}",
+            "updated": "A Enroll is updated with identifier {{ param }}",
+            "deleted": "A Enroll is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Enroll {{ id }}?"
+            },
+            "detail": {
+                "title": "Enroll"
+            },
+            "accountStatus": "Account Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "payment": "Payment",
+            "course": "Course",
+            "student": "Student",
+            "batch": "Batch"
+        }
+    }
+}

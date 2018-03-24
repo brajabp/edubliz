@@ -1,0 +1,74 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "batch",
+            "otherEntityName": "batch",
+            "otherEntityRelationshipName": "employee"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "followUp",
+            "otherEntityName": "followUp",
+            "otherEntityRelationshipName": "employee"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "organization",
+            "otherEntityName": "organization",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "ACTIVE,INACTIVE"
+        },
+        {
+            "fieldName": "jobType",
+            "fieldType": "JobType",
+            "fieldValues": "TEACHER,ADMIN,RECEPTIONIST,MAINTAINER"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "joinDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "salary",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180324222806",
+    "entityTableName": "employee",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "bli"
+}

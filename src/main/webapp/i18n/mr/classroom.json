@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "classroom" : {
+            "home": {
+                "title": "Classrooms",
+                "createLabel": "नवीन Classroom तयार करा",
+                "createOrEditLabel": "Classroom तयार किंवा संपादित करा"
+            },
+            "created": "Classroom [identifier: {{ param }}] तयार आहे",
+            "updated": "Classroom [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Classroom [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Classroom [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Classroom"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "actualDate": "Actual Date",
+            "actualDuration": "Actual Duration",
+            "sudentPresent": "Sudent Present",
+            "classLog": "Class Log",
+            "schedule": "Schedule"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+{
+    "eduApp": {
+        "subject" : {
+            "home": {
+                "title": "Subjects",
+                "createLabel": "Create a new Subject",
+                "createOrEditLabel": "Create or edit a Subject"
+            },
+            "created": "A new Subject is created with identifier {{ param }}",
+            "updated": "A Subject is updated with identifier {{ param }}",
+            "deleted": "A Subject is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Subject {{ id }}?"
+            },
+            "detail": {
+                "title": "Subject"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "fee": "Fee",
+            "durationYear": "Duration Year",
+            "durationMonth": "Duration Month",
+            "durationDay": "Duration Day",
+            "batch": "Batch",
+            "course": "Course"
+        }
+    }
+}

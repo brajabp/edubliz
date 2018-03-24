@@ -1,0 +1,48 @@
+
+<div *ngIf="schedule">
+    <h2><span jhiTranslate="eduApp.schedule.detail.title">Schedule</span> {{schedule.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.schedule.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + schedule.status}}">{{schedule.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.schedule.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{schedule.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.schedule.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{schedule.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.schedule.plannedDate">Planned Date</span></dt>
+        <dd>
+            <span>{{schedule.plannedDate}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.schedule.plannedDuration">Planned Duration</span></dt>
+        <dd>
+            <span>{{schedule.plannedDuration}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.schedule.batch">Batch</span></dt>
+        <dd>
+            <div *ngIf="schedule.batchId">
+                <a [routerLink]="['/batch-bli', schedule.batchId]">{{schedule.batchId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'schedule-bli/'+ schedule.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

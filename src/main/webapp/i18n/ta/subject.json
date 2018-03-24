@@ -1,0 +1,31 @@
+
+{
+    "eduApp": {
+        "subject" : {
+            "home": {
+                "title": "Subjects",
+                "createLabel": "Subject-ஐ உருவாக்கு",
+                "createOrEditLabel": "Subject -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Subject புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Subject மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Subject நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Subject {{ id }}?"
+            },
+            "detail": {
+                "title": "Subject"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "fee": "Fee",
+            "durationYear": "Duration Year",
+            "durationMonth": "Duration Month",
+            "durationDay": "Duration Day",
+            "batch": "Batch",
+            "course": "Course"
+        }
+    }
+}

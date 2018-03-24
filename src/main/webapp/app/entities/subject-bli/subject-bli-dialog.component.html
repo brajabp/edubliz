@@ -1,0 +1,78 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="mySubjectLabel" jhiTranslate="eduApp.subject.home.createOrEditLabel">Create or edit a Subject</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!subject.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="subject.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                [(ngModel)]="subject.name" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="subject.status" id="field_status" >
+                <option value="ACTIVE">{{'eduApp.Status.ACTIVE' | translate}}</option>
+                <option value="INACTIVE">{{'eduApp.Status.INACTIVE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="subject.createDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.modDate" for="field_modDate">Mod Date</label>
+            <div class="d-flex">
+                <input id="field_modDate" type="datetime-local" class="form-control" name="modDate" [(ngModel)]="subject.modDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.fee" for="field_fee">Fee</label>
+            <input type="number" class="form-control" name="fee" id="field_fee"
+                [(ngModel)]="subject.fee" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.durationYear" for="field_durationYear">Duration Year</label>
+            <input type="number" class="form-control" name="durationYear" id="field_durationYear"
+                [(ngModel)]="subject.durationYear" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.durationMonth" for="field_durationMonth">Duration Month</label>
+            <input type="number" class="form-control" name="durationMonth" id="field_durationMonth"
+                [(ngModel)]="subject.durationMonth" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.durationDay" for="field_durationDay">Duration Day</label>
+            <input type="number" class="form-control" name="durationDay" id="field_durationDay"
+                [(ngModel)]="subject.durationDay" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.subject.course" for="field_course">Course</label>
+            <select class="form-control" id="field_course" name="course" [(ngModel)]="subject.courseId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="courseOption.id" *ngFor="let courseOption of courses; trackBy: trackCourseById">{{courseOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+
+{
+    "eduApp": {
+        "subject" : {
+            "home": {
+                "title": "Subjects",
+                "createLabel": "नवीन Subject तयार करा",
+                "createOrEditLabel": "Subject तयार किंवा संपादित करा"
+            },
+            "created": "Subject [identifier: {{ param }}] तयार आहे",
+            "updated": "Subject [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Subject [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Subject [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Subject"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "fee": "Fee",
+            "durationYear": "Duration Year",
+            "durationMonth": "Duration Month",
+            "durationDay": "Duration Day",
+            "batch": "Batch",
+            "course": "Course"
+        }
+    }
+}

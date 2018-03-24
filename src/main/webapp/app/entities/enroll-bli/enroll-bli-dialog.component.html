@@ -1,0 +1,68 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEnrollLabel" jhiTranslate="eduApp.enroll.home.createOrEditLabel">Create or edit a Enroll</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!enroll.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="enroll.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.accountStatus" for="field_accountStatus">Account Status</label>
+            <select class="form-control" name="accountStatus" [(ngModel)]="enroll.accountStatus" id="field_accountStatus" >
+                <option value="PENDING">{{'eduApp.AccountStatus.PENDING' | translate}}</option>
+                <option value="SUBSCRIBED">{{'eduApp.AccountStatus.SUBSCRIBED' | translate}}</option>
+                <option value="UNSUBSCRIBED">{{'eduApp.AccountStatus.UNSUBSCRIBED' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="enroll.createDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.modDate" for="field_modDate">Mod Date</label>
+            <div class="d-flex">
+                <input id="field_modDate" type="datetime-local" class="form-control" name="modDate" [(ngModel)]="enroll.modDate"
+                />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.course" for="field_course">Course</label>
+            <select class="form-control" id="field_course" name="course" [(ngModel)]="enroll.courseId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="courseOption.id" *ngFor="let courseOption of courses; trackBy: trackCourseById">{{courseOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.student" for="field_student">Student</label>
+            <select class="form-control" id="field_student" name="student" [(ngModel)]="enroll.studentId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="studentOption.id" *ngFor="let studentOption of students; trackBy: trackStudentById">{{studentOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enroll.batch" for="field_batch">Batch</label>
+            <select class="form-control" id="field_batch" name="batch" [(ngModel)]="enroll.batchId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="batchOption.id" *ngFor="let batchOption of batches; trackBy: trackBatchById">{{batchOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

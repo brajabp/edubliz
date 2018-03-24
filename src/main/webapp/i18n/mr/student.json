@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "नवीन Student तयार करा",
+                "createOrEditLabel": "Student तयार किंवा संपादित करा"
+            },
+            "created": "Student [identifier: {{ param }}] तयार आहे",
+            "updated": "Student [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Student [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Student [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "enroll": "Enroll",
+            "batch": "Batch",
+            "enquiry": "Enquiry",
+            "organization": "Organization"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "eduApp": {
+        "LogType" : {
+            "null": "",
+            "TEACHER_JOINED": "TEACHER_JOINED",
+            "STUDENT_JOINED": "STUDENT_JOINED",
+            "CLASS_NOTE": "CLASS_NOTE",
+            "TODO": "TODO",
+            "DONE": "DONE"
+        }
+    }
+}

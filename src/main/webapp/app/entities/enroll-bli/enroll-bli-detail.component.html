@@ -1,0 +1,52 @@
+
+<div *ngIf="enroll">
+    <h2><span jhiTranslate="eduApp.enroll.detail.title">Enroll</span> {{enroll.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.enroll.accountStatus">Account Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.AccountStatus.' + enroll.accountStatus}}">{{enroll.accountStatus}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.enroll.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{enroll.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.enroll.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{enroll.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.enroll.course">Course</span></dt>
+        <dd>
+            <div *ngIf="enroll.courseId">
+                <a [routerLink]="['/course-bli', enroll.courseId]">{{enroll.courseId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eduApp.enroll.student">Student</span></dt>
+        <dd>
+            <div *ngIf="enroll.studentId">
+                <a [routerLink]="['/student-bli', enroll.studentId]">{{enroll.studentId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eduApp.enroll.batch">Batch</span></dt>
+        <dd>
+            <div *ngIf="enroll.batchId">
+                <a [routerLink]="['/batch-bli', enroll.batchId]">{{enroll.batchId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'enroll-bli/'+ enroll.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

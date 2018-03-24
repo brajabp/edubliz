@@ -1,0 +1,25 @@
+
+{
+    "eduApp": {
+        "followUp" : {
+            "home": {
+                "title": "Follow Ups",
+                "createLabel": "Create a new Follow Up",
+                "createOrEditLabel": "Create or edit a Follow Up"
+            },
+            "created": "A new Follow Up is created with identifier {{ param }}",
+            "updated": "A Follow Up is updated with identifier {{ param }}",
+            "deleted": "A Follow Up is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Follow Up {{ id }}?"
+            },
+            "detail": {
+                "title": "Follow Up"
+            },
+            "followUpDate": "Follow Up Date",
+            "comment": "Comment",
+            "enquiry": "Enquiry",
+            "employee": "Employee"
+        }
+    }
+}

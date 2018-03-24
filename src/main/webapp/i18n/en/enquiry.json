@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "enquiry" : {
+            "home": {
+                "title": "Enquiries",
+                "createLabel": "Create a new Enquiry",
+                "createOrEditLabel": "Create or edit a Enquiry"
+            },
+            "created": "A new Enquiry is created with identifier {{ param }}",
+            "updated": "A Enquiry is updated with identifier {{ param }}",
+            "deleted": "A Enquiry is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Enquiry {{ id }}?"
+            },
+            "detail": {
+                "title": "Enquiry"
+            },
+            "enquiryDate": "Enquiry Date",
+            "comment": "Comment",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "followUp": "Follow Up",
+            "organization": "Organization",
+            "student": "Student"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "eduApp": {
+        "JobType" : {
+            "null": "",
+            "TEACHER": "TEACHER",
+            "ADMIN": "ADMIN",
+            "RECEPTIONIST": "RECEPTIONIST",
+            "MAINTAINER": "MAINTAINER"
+        }
+    }
+}

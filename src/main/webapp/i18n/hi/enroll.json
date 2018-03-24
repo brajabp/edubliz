@@ -1,0 +1,28 @@
+
+{
+    "eduApp": {
+        "enroll" : {
+            "home": {
+                "title": "Enrolls",
+                "createLabel": "नया Enroll बनाएँ",
+                "createOrEditLabel": "Enroll बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Enroll [identifier: {{ param }}] तैयार है",
+            "updated": "एक Enroll [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Enroll [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Enroll [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Enroll"
+            },
+            "accountStatus": "Account Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "payment": "Payment",
+            "course": "Course",
+            "student": "Student",
+            "batch": "Batch"
+        }
+    }
+}

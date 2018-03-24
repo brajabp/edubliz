@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "classroom",
+            "otherEntityName": "classroom",
+            "otherEntityRelationshipName": "schedule"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "batch",
+            "otherEntityName": "batch",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "ACTIVE,INACTIVE"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "plannedDate",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "plannedDuration",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180324222815",
+    "entityTableName": "schedule",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "bli"
+}

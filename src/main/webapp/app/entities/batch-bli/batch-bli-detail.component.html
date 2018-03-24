@@ -1,0 +1,64 @@
+
+<div *ngIf="batch">
+    <h2><span jhiTranslate="eduApp.batch.detail.title">Batch</span> {{batch.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.batch.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + batch.status}}">{{batch.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{batch.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{batch.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{batch.startDate}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.endDate">End Date</span></dt>
+        <dd>
+            <span>{{batch.endDate}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.sudentCapacity">Sudent Capacity</span></dt>
+        <dd>
+            <span>{{batch.sudentCapacity}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.subject">Subject</span></dt>
+        <dd>
+            <div *ngIf="batch.subjectId">
+                <a [routerLink]="['/subject-bli', batch.subjectId]">{{batch.subjectId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.student">Student</span></dt>
+        <dd>
+            <div *ngIf="batch.studentId">
+                <a [routerLink]="['/student-bli', batch.studentId]">{{batch.studentId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eduApp.batch.employee">Employee</span></dt>
+        <dd>
+            <div *ngIf="batch.employeeId">
+                <a [routerLink]="['/employee-bli', batch.employeeId]">{{batch.employeeId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'batch-bli/'+ batch.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

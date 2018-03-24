@@ -1,0 +1,78 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myClassLogLabel" jhiTranslate="eduApp.classLog.home.createOrEditLabel">Create or edit a Class Log</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!classLog.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="classLog.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="classLog.status" id="field_status" >
+                <option value="ACTIVE">{{'eduApp.Status.ACTIVE' | translate}}</option>
+                <option value="INACTIVE">{{'eduApp.Status.INACTIVE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="classLog.createDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.modDate" for="field_modDate">Mod Date</label>
+            <div class="d-flex">
+                <input id="field_modDate" type="datetime-local" class="form-control" name="modDate" [(ngModel)]="classLog.modDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.actualDate" for="field_actualDate">Actual Date</label>
+            <input type="number" class="form-control" name="actualDate" id="field_actualDate"
+                [(ngModel)]="classLog.actualDate" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.actualDuration" for="field_actualDuration">Actual Duration</label>
+            <input type="number" class="form-control" name="actualDuration" id="field_actualDuration"
+                [(ngModel)]="classLog.actualDuration" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.sudentPresent" for="field_sudentPresent">Sudent Present</label>
+            <input type="number" class="form-control" name="sudentPresent" id="field_sudentPresent"
+                [(ngModel)]="classLog.sudentPresent" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.logType" for="field_logType">Log Type</label>
+            <select class="form-control" name="logType" [(ngModel)]="classLog.logType" id="field_logType" >
+                <option value="TEACHER_JOINED">{{'eduApp.LogType.TEACHER_JOINED' | translate}}</option>
+                <option value="STUDENT_JOINED">{{'eduApp.LogType.STUDENT_JOINED' | translate}}</option>
+                <option value="CLASS_NOTE">{{'eduApp.LogType.CLASS_NOTE' | translate}}</option>
+                <option value="TODO">{{'eduApp.LogType.TODO' | translate}}</option>
+                <option value="DONE">{{'eduApp.LogType.DONE' | translate}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.classLog.classroom" for="field_classroom">Classroom</label>
+            <select class="form-control" id="field_classroom" name="classroom" [(ngModel)]="classLog.classroomId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="classroomOption.id" *ngFor="let classroomOption of classrooms; trackBy: trackClassroomById">{{classroomOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

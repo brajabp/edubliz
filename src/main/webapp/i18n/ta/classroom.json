@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "classroom" : {
+            "home": {
+                "title": "Classrooms",
+                "createLabel": "Classroom-ஐ உருவாக்கு",
+                "createOrEditLabel": "Classroom -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Classroom புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Classroom மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Classroom நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Classroom {{ id }}?"
+            },
+            "detail": {
+                "title": "Classroom"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "actualDate": "Actual Date",
+            "actualDuration": "Actual Duration",
+            "sudentPresent": "Sudent Present",
+            "classLog": "Class Log",
+            "schedule": "Schedule"
+        }
+    }
+}

@@ -1,0 +1,78 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.course.home.title">Courses</span>
+        <button class="btn btn-primary float-right jh-create-entity create-course-bli" [routerLink]="['/', { outlets: { popup: ['course-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.course.home.createLabel">
+            Create new Course
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="courses">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="eduApp.course.name">Name</span></th>
+            <th><span jhiTranslate="eduApp.course.status">Status</span></th>
+            <th><span jhiTranslate="eduApp.course.createDate">Create Date</span></th>
+            <th><span jhiTranslate="eduApp.course.modDate">Mod Date</span></th>
+            <th><span jhiTranslate="eduApp.course.fee">Fee</span></th>
+            <th><span jhiTranslate="eduApp.course.durationYear">Duration Year</span></th>
+            <th><span jhiTranslate="eduApp.course.durationMonth">Duration Month</span></th>
+            <th><span jhiTranslate="eduApp.course.durationDay">Duration Day</span></th>
+            <th><span jhiTranslate="eduApp.course.organization">Organization</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let course of courses ;trackBy: trackId">
+                <td><a [routerLink]="['../course-bli', course.id ]">{{course.id}}</a></td>
+                <td>{{course.name}}</td>
+                <td jhiTranslate="{{'eduApp.Status.' + course.status}}">{{course.status}}</td>
+                <td>{{course.createDate | date:'medium'}}</td>
+                <td>{{course.modDate | date:'medium'}}</td>
+                <td>{{course.fee}}</td>
+                <td>{{course.durationYear}}</td>
+                <td>{{course.durationMonth}}</td>
+                <td>{{course.durationDay}}</td>
+                <td>
+                    <div *ngIf="course.organizationId">
+                        <a [routerLink]="['../organization-bli', course.organizationId  ]" >{{course.organizationId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../course-bli', course.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'course-bli/'+ course.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'course-bli/'+ course.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

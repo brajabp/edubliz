@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Course-ஐ உருவாக்கு",
+                "createOrEditLabel": "Course -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Course புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Course மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Course நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Course {{ id }}?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "fee": "Fee",
+            "durationYear": "Duration Year",
+            "durationMonth": "Duration Month",
+            "durationDay": "Duration Day",
+            "enroll": "Enroll",
+            "subject": "Subject",
+            "organization": "Organization"
+        }
+    }
+}

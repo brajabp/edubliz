@@ -1,0 +1,82 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myBatchLabel" jhiTranslate="eduApp.batch.home.createOrEditLabel">Create or edit a Batch</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!batch.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="batch.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="batch.status" id="field_status" >
+                <option value="ACTIVE">{{'eduApp.Status.ACTIVE' | translate}}</option>
+                <option value="INACTIVE">{{'eduApp.Status.INACTIVE' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.createDate" for="field_createDate">Create Date</label>
+            <div class="d-flex">
+                <input id="field_createDate" type="datetime-local" class="form-control" name="createDate" [(ngModel)]="batch.createDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.modDate" for="field_modDate">Mod Date</label>
+            <div class="d-flex">
+                <input id="field_modDate" type="datetime-local" class="form-control" name="modDate" [(ngModel)]="batch.modDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.startDate" for="field_startDate">Start Date</label>
+            <input type="number" class="form-control" name="startDate" id="field_startDate"
+                [(ngModel)]="batch.startDate" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.endDate" for="field_endDate">End Date</label>
+            <input type="number" class="form-control" name="endDate" id="field_endDate"
+                [(ngModel)]="batch.endDate" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.sudentCapacity" for="field_sudentCapacity">Sudent Capacity</label>
+            <input type="number" class="form-control" name="sudentCapacity" id="field_sudentCapacity"
+                [(ngModel)]="batch.sudentCapacity" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.subject" for="field_subject">Subject</label>
+            <select class="form-control" id="field_subject" name="subject" [(ngModel)]="batch.subjectId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="subjectOption.id" *ngFor="let subjectOption of subjects; trackBy: trackSubjectById">{{subjectOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.student" for="field_student">Student</label>
+            <select class="form-control" id="field_student" name="student" [(ngModel)]="batch.studentId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="studentOption.id" *ngFor="let studentOption of students; trackBy: trackStudentById">{{studentOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.batch.employee" for="field_employee">Employee</label>
+            <select class="form-control" id="field_employee" name="employee" [(ngModel)]="batch.employeeId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="employeeOption.id" *ngFor="let employeeOption of employees; trackBy: trackEmployeeById">{{employeeOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

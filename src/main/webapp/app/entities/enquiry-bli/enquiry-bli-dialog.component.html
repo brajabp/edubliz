@@ -1,0 +1,66 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEnquiryLabel" jhiTranslate="eduApp.enquiry.home.createOrEditLabel">Create or edit a Enquiry</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!enquiry.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="enquiry.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.enquiryDate" for="field_enquiryDate">Enquiry Date</label>
+            <div class="d-flex">
+                <input id="field_enquiryDate" type="datetime-local" class="form-control" name="enquiryDate" [(ngModel)]="enquiry.enquiryDate"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.comment" for="field_comment">Comment</label>
+            <input type="text" class="form-control" name="comment" id="field_comment"
+                [(ngModel)]="enquiry.comment" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                [(ngModel)]="enquiry.phone" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                [(ngModel)]="enquiry.email" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                [(ngModel)]="enquiry.address" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.organization" for="field_organization">Organization</label>
+            <select class="form-control" id="field_organization" name="organization" [(ngModel)]="enquiry.organizationId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="organizationOption.id" *ngFor="let organizationOption of organizations; trackBy: trackOrganizationById">{{organizationOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="eduApp.enquiry.student" for="field_student">Student</label>
+            <select class="form-control" id="field_student" name="student" [(ngModel)]="enquiry.studentId" >
+                <option [ngValue]="null"></option>
+                <option [ngValue]="studentOption.id" *ngFor="let studentOption of students; trackBy: trackStudentById">{{studentOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

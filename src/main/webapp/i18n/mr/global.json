@@ -7,6 +7,20 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "एंटिटीज़",
+                "organizationBli": "Organization",
+                "divisionBli": "Division",
+                "employeeBli": "Employee",
+                "courseBli": "Course",
+                "subjectBli": "Subject",
+                "enquiryBli": "Enquiry",
+                "followUpBli": "Follow Up",
+                "studentBli": "Student",
+                "enrollBli": "Enroll",
+                "paymentBli": "Payment",
+                "batchBli": "Batch",
+                "scheduleBli": "Schedule",
+                "classroomBli": "Classroom",
+                "classLogBli": "Class Log",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

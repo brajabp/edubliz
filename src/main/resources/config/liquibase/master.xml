@@ -5,6 +5,33 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222804_added_entity_Organization.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222805_added_entity_Division.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222806_added_entity_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222807_added_entity_Course.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222808_added_entity_Subject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222809_added_entity_Enquiry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222810_added_entity_FollowUp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222811_added_entity_Student.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222812_added_entity_Enroll.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222813_added_entity_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222814_added_entity_Batch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222815_added_entity_Schedule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222816_added_entity_Classroom.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222817_added_entity_ClassLog.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20180324222805_added_entity_constraints_Division.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222806_added_entity_constraints_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222807_added_entity_constraints_Course.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222808_added_entity_constraints_Subject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222809_added_entity_constraints_Enquiry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222810_added_entity_constraints_FollowUp.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222811_added_entity_constraints_Student.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222812_added_entity_constraints_Enroll.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222813_added_entity_constraints_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222814_added_entity_constraints_Batch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222815_added_entity_constraints_Schedule.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222816_added_entity_constraints_Classroom.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180324222817_added_entity_constraints_ClassLog.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

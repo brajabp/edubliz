@@ -1,0 +1,25 @@
+
+{
+    "eduApp": {
+        "followUp" : {
+            "home": {
+                "title": "Follow Ups",
+                "createLabel": "Follow Up-ஐ உருவாக்கு",
+                "createOrEditLabel": "Follow Up -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Follow Up புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Follow Up மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Follow Up நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Follow Up {{ id }}?"
+            },
+            "detail": {
+                "title": "Follow Up"
+            },
+            "followUpDate": "Follow Up Date",
+            "comment": "Comment",
+            "enquiry": "Enquiry",
+            "employee": "Employee"
+        }
+    }
+}

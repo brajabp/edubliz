@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "classLog" : {
+            "home": {
+                "title": "ClassLogs",
+                "createLabel": "नया Class Log बनाएँ",
+                "createOrEditLabel": "Class Log बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Class Log [identifier: {{ param }}] तैयार है",
+            "updated": "एक Class Log [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Class Log [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Class Log [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Class Log"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "actualDate": "Actual Date",
+            "actualDuration": "Actual Duration",
+            "sudentPresent": "Sudent Present",
+            "logType": "Log Type",
+            "classroom": "Classroom"
+        }
+    }
+}

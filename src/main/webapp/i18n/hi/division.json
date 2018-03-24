@@ -1,0 +1,27 @@
+
+{
+    "eduApp": {
+        "division" : {
+            "home": {
+                "title": "Divisions",
+                "createLabel": "नया Division बनाएँ",
+                "createOrEditLabel": "Division बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Division [identifier: {{ param }}] तैयार है",
+            "updated": "एक Division [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Division [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Division [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Division"
+            },
+            "name": "Name",
+            "status": "Status",
+            "accountStatus": "Account Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "organization": "Organization"
+        }
+    }
+}

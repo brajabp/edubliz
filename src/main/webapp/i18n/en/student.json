@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Create a new Student",
+                "createOrEditLabel": "Create or edit a Student"
+            },
+            "created": "A new Student is created with identifier {{ param }}",
+            "updated": "A Student is updated with identifier {{ param }}",
+            "deleted": "A Student is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "enroll": "Enroll",
+            "batch": "Batch",
+            "enquiry": "Enquiry",
+            "organization": "Organization"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+
+<div *ngIf="course">
+    <h2><span jhiTranslate="eduApp.course.detail.title">Course</span> {{course.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.course.name">Name</span></dt>
+        <dd>
+            <span>{{course.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + course.status}}">{{course.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{course.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{course.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.fee">Fee</span></dt>
+        <dd>
+            <span>{{course.fee}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.durationYear">Duration Year</span></dt>
+        <dd>
+            <span>{{course.durationYear}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.durationMonth">Duration Month</span></dt>
+        <dd>
+            <span>{{course.durationMonth}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.durationDay">Duration Day</span></dt>
+        <dd>
+            <span>{{course.durationDay}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.course.organization">Organization</span></dt>
+        <dd>
+            <div *ngIf="course.organizationId">
+                <a [routerLink]="['/organization-bli', course.organizationId]">{{course.organizationId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'course-bli/'+ course.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

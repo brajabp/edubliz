@@ -1,0 +1,28 @@
+
+{
+    "eduApp": {
+        "schedule" : {
+            "home": {
+                "title": "Schedules",
+                "createLabel": "Schedule-ஐ உருவாக்கு",
+                "createOrEditLabel": "Schedule -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Schedule புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Schedule மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Schedule நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Schedule {{ id }}?"
+            },
+            "detail": {
+                "title": "Schedule"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "plannedDate": "Planned Date",
+            "plannedDuration": "Planned Duration",
+            "classroom": "Classroom",
+            "batch": "Batch"
+        }
+    }
+}

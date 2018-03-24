@@ -1,0 +1,42 @@
+
+<div *ngIf="organization">
+    <h2><span jhiTranslate="eduApp.organization.detail.title">Organization</span> {{organization.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.organization.name">Name</span></dt>
+        <dd>
+            <span>{{organization.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.organization.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + organization.status}}">{{organization.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.organization.accountStatus">Account Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.AccountStatus.' + organization.accountStatus}}">{{organization.accountStatus}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.organization.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{organization.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.organization.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{organization.modDate | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'organization-bli/'+ organization.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

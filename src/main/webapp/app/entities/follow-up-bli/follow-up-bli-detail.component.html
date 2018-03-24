@@ -1,0 +1,42 @@
+
+<div *ngIf="followUp">
+    <h2><span jhiTranslate="eduApp.followUp.detail.title">Follow Up</span> {{followUp.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.followUp.followUpDate">Follow Up Date</span></dt>
+        <dd>
+            <span>{{followUp.followUpDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.followUp.comment">Comment</span></dt>
+        <dd>
+            <span>{{followUp.comment}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.followUp.enquiry">Enquiry</span></dt>
+        <dd>
+            <div *ngIf="followUp.enquiryId">
+                <a [routerLink]="['/enquiry-bli', followUp.enquiryId]">{{followUp.enquiryId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="eduApp.followUp.employee">Employee</span></dt>
+        <dd>
+            <div *ngIf="followUp.employeeId">
+                <a [routerLink]="['/employee-bli', followUp.employeeId]">{{followUp.employeeId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'follow-up-bli/'+ followUp.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

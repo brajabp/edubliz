@@ -1,0 +1,32 @@
+
+{
+    "eduApp": {
+        "course" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "नवीन Course तयार करा",
+                "createOrEditLabel": "Course तयार किंवा संपादित करा"
+            },
+            "created": "Course [identifier: {{ param }}] तयार आहे",
+            "updated": "Course [identifier: {{ param }}] सुधारित केले आहे",
+            "deleted": "Course [identifier: {{ param }}] हटविले आहे",
+            "delete": {
+                "question": "Course [id: {{ id }}] काढून टाकण्याबाबत पुष्टी?"
+            },
+            "detail": {
+                "title": "Course"
+            },
+            "name": "Name",
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "fee": "Fee",
+            "durationYear": "Duration Year",
+            "durationMonth": "Duration Month",
+            "durationDay": "Duration Day",
+            "enroll": "Enroll",
+            "subject": "Subject",
+            "organization": "Organization"
+        }
+    }
+}

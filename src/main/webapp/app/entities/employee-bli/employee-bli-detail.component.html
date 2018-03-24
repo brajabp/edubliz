@@ -1,0 +1,68 @@
+
+<div *ngIf="employee">
+    <h2><span jhiTranslate="eduApp.employee.detail.title">Employee</span> {{employee.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eduApp.employee.name">Name</span></dt>
+        <dd>
+            <span>{{employee.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.status">Status</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.Status.' + employee.status}}">{{employee.status}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.jobType">Job Type</span></dt>
+        <dd>
+            <span jhiTranslate="{{'eduApp.JobType.' + employee.jobType}}">{{employee.jobType}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{employee.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.modDate">Mod Date</span></dt>
+        <dd>
+            <span>{{employee.modDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.joinDate">Join Date</span></dt>
+        <dd>
+            <span>{{employee.joinDate | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.salary">Salary</span></dt>
+        <dd>
+            <span>{{employee.salary}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.phone">Phone</span></dt>
+        <dd>
+            <span>{{employee.phone}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.email">Email</span></dt>
+        <dd>
+            <span>{{employee.email}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.address">Address</span></dt>
+        <dd>
+            <span>{{employee.address}}</span>
+        </dd>
+        <dt><span jhiTranslate="eduApp.employee.organization">Organization</span></dt>
+        <dd>
+            <div *ngIf="employee.organizationId">
+                <a [routerLink]="['/organization-bli', employee.organizationId]">{{employee.organizationId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'employee-bli/'+ employee.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

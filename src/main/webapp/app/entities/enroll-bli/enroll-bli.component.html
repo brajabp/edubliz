@@ -1,0 +1,80 @@
+<div>
+    <h2>
+        <span jhiTranslate="eduApp.enroll.home.title">Enrolls</span>
+        <button class="btn btn-primary float-right jh-create-entity create-enroll-bli" [routerLink]="['/', { outlets: { popup: ['enroll-bli-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="eduApp.enroll.home.createLabel">
+            Create new Enroll
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="enrolls">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="accountStatus"><span jhiTranslate="eduApp.enroll.accountStatus">Account Status</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="createDate"><span jhiTranslate="eduApp.enroll.createDate">Create Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="modDate"><span jhiTranslate="eduApp.enroll.modDate">Mod Date</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="courseId"><span jhiTranslate="eduApp.enroll.course">Course</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="studentId"><span jhiTranslate="eduApp.enroll.student">Student</span> <span class="fa fa-sort"></span></th>
+            <th jhiSortBy="batchId"><span jhiTranslate="eduApp.enroll.batch">Batch</span> <span class="fa fa-sort"></span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let enroll of enrolls ;trackBy: trackId">
+                <td><a [routerLink]="['../enroll-bli', enroll.id ]">{{enroll.id}}</a></td>
+                <td jhiTranslate="{{'eduApp.AccountStatus.' + enroll.accountStatus}}">{{enroll.accountStatus}}</td>
+                <td>{{enroll.createDate | date:'medium'}}</td>
+                <td>{{enroll.modDate | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="enroll.courseId">
+                        <a [routerLink]="['../course-bli', enroll.courseId  ]" >{{enroll.courseId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="enroll.studentId">
+                        <a [routerLink]="['../student-bli', enroll.studentId  ]" >{{enroll.studentId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="enroll.batchId">
+                        <a [routerLink]="['../batch-bli', enroll.batchId  ]" >{{enroll.batchId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../enroll-bli', enroll.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enroll-bli/'+ enroll.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'enroll-bli/'+ enroll.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

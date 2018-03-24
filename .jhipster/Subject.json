@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "batch",
+            "otherEntityName": "batch",
+            "otherEntityRelationshipName": "subject"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "course",
+            "otherEntityName": "course",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "ACTIVE,INACTIVE"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "modDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "fee",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "durationYear",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "durationMonth",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "durationDay",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180324222808",
+    "entityTableName": "subject",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "bli"
+}

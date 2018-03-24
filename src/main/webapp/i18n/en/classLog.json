@@ -1,0 +1,29 @@
+
+{
+    "eduApp": {
+        "classLog" : {
+            "home": {
+                "title": "Class Logs",
+                "createLabel": "Create a new Class Log",
+                "createOrEditLabel": "Create or edit a Class Log"
+            },
+            "created": "A new Class Log is created with identifier {{ param }}",
+            "updated": "A Class Log is updated with identifier {{ param }}",
+            "deleted": "A Class Log is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Class Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Class Log"
+            },
+            "status": "Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "actualDate": "Actual Date",
+            "actualDuration": "Actual Duration",
+            "sudentPresent": "Sudent Present",
+            "logType": "Log Type",
+            "classroom": "Classroom"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+
+{
+    "eduApp": {
+        "enroll" : {
+            "home": {
+                "title": "Enrolls",
+                "createLabel": "Enroll-ஐ உருவாக்கு",
+                "createOrEditLabel": "Enroll -ஐ மாற்று (அ) உருவாக்கு"
+            },
+            "created": "Enroll புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Enroll மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Enroll நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Enroll {{ id }}?"
+            },
+            "detail": {
+                "title": "Enroll"
+            },
+            "accountStatus": "Account Status",
+            "createDate": "Create Date",
+            "modDate": "Mod Date",
+            "payment": "Payment",
+            "course": "Course",
+            "student": "Student",
+            "batch": "Batch"
+        }
+    }
+}

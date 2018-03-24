@@ -1,0 +1,25 @@
+
+{
+    "eduApp": {
+        "followUp" : {
+            "home": {
+                "title": "FollowUps",
+                "createLabel": "नया Follow Up बनाएँ",
+                "createOrEditLabel": "Follow Up बनाएँ या संपादित करें"
+            },
+            "created": "एक नया Follow Up [identifier: {{ param }}] तैयार है",
+            "updated": "एक Follow Up [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Follow Up [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Follow Up [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Follow Up"
+            },
+            "followUpDate": "Follow Up Date",
+            "comment": "Comment",
+            "enquiry": "Enquiry",
+            "employee": "Employee"
+        }
+    }
+}
