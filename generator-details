@@ -1,0 +1,1800 @@
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code$ cd edu
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ jhipster
+Using JHipster version installed globally
+Running default command
+Executing jhipster:app
+Options: 
+
+
+        ██╗ ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
+        ██║ ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
+        ██║ ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
+  ██╗   ██║ ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
+  ╚██████╔╝ ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
+   ╚═════╝  ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
+
+                            http://www.jhipster.tech
+
+Welcome to the JHipster Generator v4.14.1
+ _______________________________________________________________________________________________________________
+
+  If you find JHipster useful consider supporting our collective https://opencollective.com/generator-jhipster
+  Documentation for creating an application: http://www.jhipster.tech/creating-an-app/
+ _______________________________________________________________________________________________________________
+
+Application files will be generated in folder: /home/braja/Desktop/Projects/JHipster/code/edu
+? Which *type* of application would you like to create? Monolithic application (recommended for simple projects)
+? What is the base name of your application? edu
+? What is your default Java package name? com.edu
+? Do you want to use the JHipster Registry to configure, monitor and scale your application? No
+? Which *type* of authentication would you like to use? HTTP Session Authentication (stateful, default Spring Security mechanism)
+? Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+? Which *production* database would you like to use? PostgreSQL
+? Which *development* database would you like to use? PostgreSQL
+? Do you want to use the Spring cache abstraction? Yes, with the Ehcache implementation (local cache, for a single node)
+? Do you want to use Hibernate 2nd level cache? No
+? Would you like to use Maven or Gradle for building the backend? Maven
+? Which other technologies would you like to use? 
+? Which *Framework* would you like to use for the client? Angular 5
+? Would you like to enable *SASS* support using the LibSass stylesheet preprocessor? Yes
+? Would you like to enable internationalization support? Yes
+? Please choose the native language of the application English
+? Please choose additional languages to install Hindi, Marathi, Tamil
+? Besides JUnit and Karma, which testing frameworks would you like to use? 
+? Would you like to install other generators from the JHipster Marketplace? No
+
+Installing languages: en, hi, mr, ta
+   create package.json
+   create README.md
+   create .gitignore
+   create .gitattributes
+   create .editorconfig
+   create src/main/docker/Dockerfile
+   create src/main/docker/.dockerignore
+   create src/main/docker/app.yml
+   create src/main/docker/postgresql.yml
+   create src/main/docker/sonar.yml
+   create mvnw
+   create mvnw.cmd
+   create .mvn/wrapper/maven-wrapper.jar
+   create .mvn/wrapper/maven-wrapper.properties
+   create pom.xml
+   create src/main/resources/banner.txt
+   create src/main/resources/templates/error.html
+   create src/main/resources/logback-spring.xml
+   create src/main/resources/config/application.yml
+   create src/main/resources/config/application-dev.yml
+   create src/main/resources/config/application-prod.yml
+   create src/main/resources/config/liquibase/changelog/00000000000000_initial_schema.xml
+   create src/main/resources/config/liquibase/master.xml
+   create src/main/resources/i18n/messages.properties
+   create src/main/java/com/edu/security/SpringSecurityAuditorAware.java
+   create src/main/java/com/edu/security/SecurityUtils.java
+   create src/main/java/com/edu/security/AuthoritiesConstants.java
+   create src/main/java/com/edu/config/SecurityConfiguration.java
+   create src/main/java/com/edu/domain/PersistentToken.java
+   create src/main/java/com/edu/repository/PersistentTokenRepository.java
+   create src/main/java/com/edu/security/DomainUserDetailsService.java
+   create src/main/java/com/edu/security/UserNotActivatedException.java
+   create src/main/java/com/edu/security/package-info.java
+   create src/main/java/com/edu/security/PersistentTokenRememberMeServices.java
+   create src/main/java/com/edu/EduApp.java
+   create src/main/java/com/edu/ApplicationWebXml.java
+   create src/main/java/com/edu/aop/logging/LoggingAspect.java
+   create src/main/java/com/edu/config/DefaultProfileUtil.java
+   create src/main/java/com/edu/config/package-info.java
+   create src/main/java/com/edu/config/AsyncConfiguration.java
+   create src/main/java/com/edu/config/CacheConfiguration.java
+   create src/main/java/com/edu/config/Constants.java
+   create src/main/java/com/edu/config/DateTimeFormatConfiguration.java
+   create src/main/java/com/edu/config/LoggingConfiguration.java
+   create src/main/java/com/edu/config/CloudDatabaseConfiguration.java
+   create src/main/java/com/edu/config/DatabaseConfiguration.java
+   create src/main/java/com/edu/config/audit/package-info.java
+   create src/main/java/com/edu/config/audit/AuditEventConverter.java
+   create src/main/java/com/edu/config/ApplicationProperties.java
+   create src/main/java/com/edu/config/JacksonConfiguration.java
+   create src/main/java/com/edu/config/LocaleConfiguration.java
+   create src/main/java/com/edu/config/LoggingAspectConfiguration.java
+   create src/main/java/com/edu/config/MetricsConfiguration.java
+   create src/main/java/com/edu/config/ThymeleafConfiguration.java
+   create src/main/java/com/edu/config/WebConfigurer.java
+   create src/main/java/com/edu/domain/package-info.java
+   create src/main/java/com/edu/domain/AbstractAuditingEntity.java
+   create src/main/java/com/edu/domain/PersistentAuditEvent.java
+   create src/main/java/com/edu/repository/package-info.java
+   create src/main/java/com/edu/service/package-info.java
+   create src/main/java/com/edu/service/util/RandomUtil.java
+   create src/main/java/com/edu/web/rest/errors/package-info.java
+   create src/main/java/com/edu/web/rest/errors/InternalServerErrorException.java
+   create src/main/java/com/edu/web/rest/errors/BadRequestAlertException.java
+   create src/main/java/com/edu/web/rest/errors/CustomParameterizedException.java
+   create src/main/java/com/edu/web/rest/errors/EmailAlreadyUsedException.java
+   create src/main/java/com/edu/web/rest/errors/EmailNotFoundException.java
+   create src/main/java/com/edu/web/rest/errors/ErrorConstants.java
+   create src/main/java/com/edu/web/rest/errors/ExceptionTranslator.java
+   create src/main/java/com/edu/web/rest/errors/FieldErrorVM.java
+   create src/main/java/com/edu/web/rest/errors/InvalidPasswordException.java
+   create src/main/java/com/edu/web/rest/errors/LoginAlreadyUsedException.java
+   create src/main/java/com/edu/web/rest/vm/package-info.java
+   create src/main/java/com/edu/web/rest/vm/LoggerVM.java
+   create src/main/java/com/edu/web/rest/util/HeaderUtil.java
+   create src/main/java/com/edu/web/rest/util/PaginationUtil.java
+   create src/main/java/com/edu/web/rest/package-info.java
+   create src/main/java/com/edu/web/rest/LogsResource.java
+   create src/main/java/com/edu/web/rest/ProfileInfoResource.java
+   create src/test/java/com/edu/config/WebConfigurerTest.java
+   create src/test/java/com/edu/config/WebConfigurerTestController.java
+   create src/test/java/com/edu/web/rest/TestUtil.java
+   create src/test/java/com/edu/web/rest/LogsResourceIntTest.java
+   create src/test/java/com/edu/web/rest/ProfileInfoResourceIntTest.java
+   create src/test/java/com/edu/web/rest/errors/ExceptionTranslatorIntTest.java
+   create src/test/java/com/edu/web/rest/errors/ExceptionTranslatorTestController.java
+   create src/test/java/com/edu/web/rest/util/PaginationUtilUnitTest.java
+   create src/test/resources/config/application.yml
+   create src/test/resources/logback.xml
+   create src/test/java/com/edu/security/DomainUserDetailsServiceIntTest.java
+   create src/main/resources/config/liquibase/users.csv
+   create src/main/resources/config/liquibase/authorities.csv
+   create src/main/resources/config/liquibase/users_authorities.csv
+   create src/main/resources/mails/activationEmail.html
+   create src/main/resources/mails/creationEmail.html
+   create src/main/resources/mails/passwordResetEmail.html
+   create src/main/java/com/edu/domain/User.java
+   create src/main/java/com/edu/domain/Authority.java
+   create src/main/java/com/edu/repository/CustomAuditEventRepository.java
+   create src/main/java/com/edu/repository/AuthorityRepository.java
+   create src/main/java/com/edu/repository/PersistenceAuditEventRepository.java
+   create src/main/java/com/edu/repository/UserRepository.java
+   create src/main/java/com/edu/service/UserService.java
+   create src/main/java/com/edu/service/MailService.java
+   create src/main/java/com/edu/service/AuditEventService.java
+   create src/main/java/com/edu/service/dto/package-info.java
+   create src/main/java/com/edu/service/dto/UserDTO.java
+   create src/main/java/com/edu/web/rest/vm/ManagedUserVM.java
+   create src/main/java/com/edu/web/rest/AccountResource.java
+   create src/main/java/com/edu/web/rest/UserResource.java
+   create src/main/java/com/edu/web/rest/vm/KeyAndPasswordVM.java
+   create src/main/java/com/edu/service/mapper/package-info.java
+   create src/main/java/com/edu/service/mapper/UserMapper.java
+   create src/main/java/com/edu/web/rest/AuditResource.java
+   create src/test/resources/mails/testEmail.html
+   create src/test/resources/i18n/messages_en.properties
+   create src/test/java/com/edu/service/MailServiceIntTest.java
+   create src/test/java/com/edu/service/UserServiceIntTest.java
+   create src/test/java/com/edu/web/rest/UserResourceIntTest.java
+   create src/test/java/com/edu/web/rest/AccountResourceIntTest.java
+   create src/test/java/com/edu/security/SecurityUtilsUnitTest.java
+   create src/test/java/com/edu/repository/CustomAuditEventRepositoryIntTest.java
+   create src/test/java/com/edu/web/rest/AuditResourceIntTest.java
+   create proxy.conf.json
+   create tsconfig.json
+   create tsconfig-aot.json
+   create tslint.json
+   create .angular-cli.json
+   create webpack/utils.js
+   create webpack/webpack.common.js
+   create webpack/webpack.dev.js
+   create webpack/webpack.prod.js
+   create webpack/webpack.test.js
+   create webpack/logo-jhipster.png
+   create src/main/webapp/content/scss/_bootstrap-variables.scss
+   create src/main/webapp/content/scss/global.scss
+   create src/main/webapp/content/scss/vendor.scss
+   create postcss.config.js
+   create src/main/webapp/content/images/hipster.png
+   create src/main/webapp/content/images/hipster2x.png
+   create src/main/webapp/content/images/logo-jhipster.png
+   create src/main/webapp/swagger-ui/index.html
+   create src/main/webapp/swagger-ui/dist/images/throbber.gif
+   create src/main/webapp/favicon.ico
+   create src/main/webapp/robots.txt
+   create src/main/webapp/404.html
+   create src/main/webapp/index.html
+   create src/main/webapp/manifest.webapp
+   create src/main/webapp/app/app.main.ts
+   create src/main/webapp/app/app.route.ts
+   create src/main/webapp/app/app.module.ts
+   create src/main/webapp/app/app-routing.module.ts
+   create src/main/webapp/app/app.constants.ts
+   create src/main/webapp/app/polyfills.ts
+   create src/main/webapp/app/vendor.ts
+   create src/main/webapp/app/blocks/config/prod.config.ts
+   create src/main/webapp/app/blocks/config/uib-pagination.config.ts
+   create src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts
+   create src/main/webapp/app/blocks/interceptor/notification.interceptor.ts
+   create src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts
+   create src/main/webapp/app/entities/entity.module.ts
+   create src/main/webapp/app/home/index.ts
+   create src/main/webapp/app/home/home.module.ts
+   create src/main/webapp/app/home/home.route.ts
+   create src/main/webapp/app/home/home.component.ts
+   create src/main/webapp/app/home/home.component.html
+   create src/main/webapp/app/layouts/index.ts
+   create src/main/webapp/app/layouts/profiles/page-ribbon.component.ts
+   create src/main/webapp/app/layouts/profiles/profile.service.ts
+   create src/main/webapp/app/layouts/profiles/profile-info.model.ts
+   create src/main/webapp/app/layouts/main/main.component.ts
+   create src/main/webapp/app/layouts/main/main.component.html
+   create src/main/webapp/app/layouts/navbar/navbar.component.ts
+   create src/main/webapp/app/layouts/navbar/navbar.component.html
+   create src/main/webapp/app/layouts/navbar/navbar.route.ts
+   create src/main/webapp/app/layouts/footer/footer.component.ts
+   create src/main/webapp/app/layouts/footer/footer.component.html
+   create src/main/webapp/app/layouts/error/error.route.ts
+   create src/main/webapp/app/layouts/error/error.component.ts
+   create src/main/webapp/app/layouts/error/error.component.html
+   create src/main/webapp/app/layouts/navbar/active-menu.directive.ts
+   create src/main/webapp/app/layouts/profiles/page-ribbon.scss
+   create src/main/webapp/app/layouts/navbar/navbar.scss
+   create src/main/webapp/app/home/home.scss
+   create src/main/webapp/app/account/index.ts
+   create src/main/webapp/app/account/account.route.ts
+   create src/main/webapp/app/account/account.module.ts
+   create src/main/webapp/app/account/activate/activate.route.ts
+   create src/main/webapp/app/account/activate/activate.component.ts
+   create src/main/webapp/app/account/activate/activate.component.html
+   create src/main/webapp/app/account/activate/activate.service.ts
+   create src/main/webapp/app/account/password/password.route.ts
+   create src/main/webapp/app/account/password/password-strength-bar.component.ts
+   create src/main/webapp/app/account/password/password.component.ts
+   create src/main/webapp/app/account/password/password.component.html
+   create src/main/webapp/app/account/password/password.service.ts
+   create src/main/webapp/app/account/register/register.route.ts
+   create src/main/webapp/app/account/register/register.component.ts
+   create src/main/webapp/app/account/register/register.component.html
+   create src/main/webapp/app/account/register/register.service.ts
+   create src/main/webapp/app/account/password-reset/init/password-reset-init.route.ts
+   create src/main/webapp/app/account/password-reset/init/password-reset-init.component.ts
+   create src/main/webapp/app/account/password-reset/init/password-reset-init.component.html
+   create src/main/webapp/app/account/password-reset/init/password-reset-init.service.ts
+   create src/main/webapp/app/account/password-reset/finish/password-reset-finish.route.ts
+   create src/main/webapp/app/account/password-reset/finish/password-reset-finish.component.ts
+   create src/main/webapp/app/account/password-reset/finish/password-reset-finish.component.html
+   create src/main/webapp/app/account/password-reset/finish/password-reset-finish.service.ts
+   create src/main/webapp/app/account/settings/settings.route.ts
+   create src/main/webapp/app/account/settings/settings.component.ts
+   create src/main/webapp/app/account/settings/settings.component.html
+   create src/main/webapp/app/account/sessions/sessions.route.ts
+   create src/main/webapp/app/account/sessions/session.model.ts
+   create src/main/webapp/app/account/sessions/sessions.component.ts
+   create src/main/webapp/app/account/sessions/sessions.component.html
+   create src/main/webapp/app/account/sessions/sessions.service.ts
+   create src/main/webapp/app/account/password/password-strength-bar.scss
+   create src/main/webapp/app/admin/index.ts
+   create src/main/webapp/app/admin/admin.route.ts
+   create src/main/webapp/app/admin/admin.module.ts
+   create src/main/webapp/app/admin/configuration/configuration.route.ts
+   create src/main/webapp/app/admin/configuration/configuration.component.ts
+   create src/main/webapp/app/admin/configuration/configuration.component.html
+   create src/main/webapp/app/admin/configuration/configuration.service.ts
+   create src/main/webapp/app/admin/docs/docs.route.ts
+   create src/main/webapp/app/admin/docs/docs.component.ts
+   create src/main/webapp/app/admin/docs/docs.component.html
+   create src/main/webapp/app/admin/health/health.route.ts
+   create src/main/webapp/app/admin/health/health.component.ts
+   create src/main/webapp/app/admin/health/health.component.html
+   create src/main/webapp/app/admin/health/health-modal.component.ts
+   create src/main/webapp/app/admin/health/health-modal.component.html
+   create src/main/webapp/app/admin/health/health.service.ts
+   create src/main/webapp/app/admin/logs/logs.route.ts
+   create src/main/webapp/app/admin/logs/log.model.ts
+   create src/main/webapp/app/admin/logs/logs.component.ts
+   create src/main/webapp/app/admin/logs/logs.component.html
+   create src/main/webapp/app/admin/logs/logs.service.ts
+   create src/main/webapp/app/admin/metrics/metrics.route.ts
+   create src/main/webapp/app/admin/metrics/metrics.component.ts
+   create src/main/webapp/app/admin/metrics/metrics.component.html
+   create src/main/webapp/app/admin/metrics/metrics-modal.component.ts
+   create src/main/webapp/app/admin/metrics/metrics-modal.component.html
+   create src/main/webapp/app/admin/metrics/metrics.service.ts
+   create src/main/webapp/app/admin/audits/audits.route.ts
+   create src/main/webapp/app/admin/audits/audit-data.model.ts
+   create src/main/webapp/app/admin/audits/audit.model.ts
+   create src/main/webapp/app/admin/audits/audits.component.ts
+   create src/main/webapp/app/admin/audits/audits.component.html
+   create src/main/webapp/app/admin/audits/audits.service.ts
+   create src/main/webapp/app/admin/user-management/user-management.route.ts
+   create src/main/webapp/app/admin/user-management/user-management.component.ts
+   create src/main/webapp/app/admin/user-management/user-management.component.html
+   create src/main/webapp/app/admin/user-management/user-management-detail.component.ts
+   create src/main/webapp/app/admin/user-management/user-management-detail.component.html
+   create src/main/webapp/app/admin/user-management/user-management-dialog.component.ts
+   create src/main/webapp/app/admin/user-management/user-management-dialog.component.html
+   create src/main/webapp/app/admin/user-management/user-management-delete-dialog.component.ts
+   create src/main/webapp/app/admin/user-management/user-management-delete-dialog.component.html
+   create src/main/webapp/app/admin/user-management/user-modal.service.ts
+   create src/main/webapp/app/shared/index.ts
+   create src/main/webapp/app/shared/shared.module.ts
+   create src/main/webapp/app/shared/shared-libs.module.ts
+   create src/main/webapp/app/shared/shared-common.module.ts
+   create src/main/webapp/app/shared/constants/error.constants.ts
+   create src/main/webapp/app/shared/constants/pagination.constants.ts
+   create src/main/webapp/app/shared/model/request-util.ts
+   create src/main/webapp/app/shared/model/base-entity.ts
+   create src/main/webapp/app/shared/user/account.model.ts
+   create src/main/webapp/app/shared/login/login.service.ts
+   create src/main/webapp/app/shared/alert/alert.component.ts
+   create src/main/webapp/app/shared/alert/alert-error.component.ts
+   create src/main/webapp/app/shared/login/login.component.ts
+   create src/main/webapp/app/shared/login/login.component.html
+   create src/main/webapp/app/shared/login/login-modal.service.ts
+   create src/main/webapp/app/shared/language/find-language-from-key.pipe.ts
+   create src/main/webapp/app/shared/language/language.constants.ts
+   create src/main/webapp/app/shared/language/language.helper.ts
+   create src/main/webapp/app/shared/user/user.model.ts
+   create src/main/webapp/app/shared/user/user.service.ts
+   create src/main/webapp/app/shared/auth/csrf.service.ts
+   create src/main/webapp/app/shared/auth/state-storage.service.ts
+   create src/main/webapp/app/shared/auth/principal.service.ts
+   create src/main/webapp/app/shared/auth/has-any-authority.directive.ts
+   create src/main/webapp/app/shared/auth/account.service.ts
+   create src/main/webapp/app/shared/auth/user-route-access-service.ts
+   create src/main/webapp/app/shared/auth/auth-session.service.ts
+   create src/test/javascript/karma.conf.js
+   create src/test/javascript/spec/entry.ts
+   create src/test/javascript/spec/test.module.ts
+   create src/test/javascript/spec/app/admin/health/health.component.spec.ts
+   create src/test/javascript/spec/helpers/spyobject.ts
+   create src/test/javascript/spec/helpers/mock-account.service.ts
+   create src/test/javascript/spec/helpers/mock-principal.service.ts
+   create src/test/javascript/spec/helpers/mock-route.service.ts
+   create src/test/javascript/spec/helpers/mock-login.service.ts
+   create src/test/javascript/spec/helpers/mock-event-manager.service.ts
+   create src/test/javascript/spec/helpers/mock-active-modal.service.ts
+   create src/test/javascript/spec/helpers/mock-state-storage.service.ts
+   create src/test/javascript/spec/app/account/activate/activate.component.spec.ts
+   create src/test/javascript/spec/app/account/password/password.component.spec.ts
+   create src/test/javascript/spec/app/account/password/password-strength-bar.component.spec.ts
+   create src/test/javascript/spec/app/account/password-reset/init/password-reset-init.component.spec.ts
+   create src/test/javascript/spec/app/account/password-reset/finish/password-reset-finish.component.spec.ts
+   create src/test/javascript/spec/app/account/register/register.component.spec.ts
+   create src/test/javascript/spec/app/account/settings/settings.component.spec.ts
+   create src/test/javascript/spec/app/shared/login/login.component.spec.ts
+   create src/test/javascript/spec/app/admin/audits/audits.component.spec.ts
+   create src/test/javascript/spec/app/admin/user-management/user-management.component.spec.ts
+   create src/test/javascript/spec/app/admin/user-management/user-management-detail.component.spec.ts
+   create src/test/javascript/spec/app/admin/user-management/user-management-dialog.component.spec.ts
+   create src/test/javascript/spec/app/admin/user-management/user-management-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/shared/user/user.service.spec.ts
+   create src/test/javascript/spec/app/account/sessions/sessions.component.spec.ts
+   create src/test/javascript/spec/helpers/mock-language.service.ts
+   create src/main/webapp/i18n/en/audits.json
+   create src/main/webapp/i18n/en/configuration.json
+   create src/main/webapp/i18n/en/error.json
+   create src/main/webapp/i18n/en/gateway.json
+   create src/main/webapp/i18n/en/login.json
+   create src/main/webapp/i18n/en/home.json
+   create src/main/webapp/i18n/en/metrics.json
+   create src/main/webapp/i18n/en/logs.json
+   create src/main/webapp/i18n/en/password.json
+   create src/main/webapp/i18n/en/register.json
+   create src/main/webapp/i18n/en/sessions.json
+   create src/main/webapp/i18n/en/settings.json
+   create src/main/webapp/i18n/en/user-management.json
+   create src/main/webapp/i18n/en/activate.json
+   create src/main/webapp/i18n/en/global.json
+   create src/main/webapp/i18n/en/health.json
+   create src/main/webapp/i18n/en/reset.json
+   create src/main/resources/i18n/messages_en.properties
+   create src/main/webapp/i18n/hi/audits.json
+   create src/main/webapp/i18n/hi/configuration.json
+   create src/main/webapp/i18n/hi/error.json
+   create src/main/webapp/i18n/hi/gateway.json
+   create src/main/webapp/i18n/hi/login.json
+   create src/main/webapp/i18n/hi/home.json
+   create src/main/webapp/i18n/hi/metrics.json
+   create src/main/webapp/i18n/hi/logs.json
+   create src/main/webapp/i18n/hi/password.json
+   create src/main/webapp/i18n/hi/register.json
+   create src/main/webapp/i18n/hi/sessions.json
+   create src/main/webapp/i18n/hi/settings.json
+   create src/main/webapp/i18n/hi/user-management.json
+   create src/main/webapp/i18n/hi/activate.json
+   create src/main/webapp/i18n/hi/global.json
+   create src/main/webapp/i18n/hi/health.json
+   create src/main/webapp/i18n/hi/reset.json
+   create src/main/resources/i18n/messages_hi.properties
+   create src/main/webapp/i18n/mr/audits.json
+   create src/main/webapp/i18n/mr/configuration.json
+   create src/main/webapp/i18n/mr/error.json
+   create src/main/webapp/i18n/mr/gateway.json
+   create src/main/webapp/i18n/mr/login.json
+   create src/main/webapp/i18n/mr/home.json
+   create src/main/webapp/i18n/mr/metrics.json
+   create src/main/webapp/i18n/mr/logs.json
+   create src/main/webapp/i18n/mr/password.json
+   create src/main/webapp/i18n/mr/register.json
+   create src/main/webapp/i18n/mr/sessions.json
+   create src/main/webapp/i18n/mr/settings.json
+   create src/main/webapp/i18n/mr/user-management.json
+   create src/main/webapp/i18n/mr/activate.json
+   create src/main/webapp/i18n/mr/global.json
+   create src/main/webapp/i18n/mr/health.json
+   create src/main/webapp/i18n/mr/reset.json
+   create src/main/resources/i18n/messages_mr.properties
+   create src/main/webapp/i18n/ta/audits.json
+   create src/main/webapp/i18n/ta/configuration.json
+   create src/main/webapp/i18n/ta/error.json
+   create src/main/webapp/i18n/ta/gateway.json
+   create src/main/webapp/i18n/ta/login.json
+   create src/main/webapp/i18n/ta/home.json
+   create src/main/webapp/i18n/ta/metrics.json
+   create src/main/webapp/i18n/ta/logs.json
+   create src/main/webapp/i18n/ta/password.json
+   create src/main/webapp/i18n/ta/register.json
+   create src/main/webapp/i18n/ta/sessions.json
+   create src/main/webapp/i18n/ta/settings.json
+   create src/main/webapp/i18n/ta/user-management.json
+   create src/main/webapp/i18n/ta/activate.json
+   create src/main/webapp/i18n/ta/global.json
+   create src/main/webapp/i18n/ta/health.json
+   create src/main/webapp/i18n/ta/reset.json
+   create src/main/resources/i18n/messages_ta.properties
+
+
+I'm all done. Running yarn install for you to install the required dependencies. If this fails, try running the command yourself.
+
+
+yarn install v1.3.2
+info No lockfile found.
+[1/5] Validating package.json...
+[2/5] Resolving packages...
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@0.5.x"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.3"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@0.1.x"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.3"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@~0.5.1"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@~0.4.1"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@0.5.x"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.7"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.4.2"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.3"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning browser-sync > browser-sync-ui > weinre > express@2.5.11: express 2.x series is deprecated
+warning browser-sync > browser-sync-ui > weinre > express > connect@1.9.2: connect 1.x series is deprecated
+warning browser-sync > browser-sync-ui > weinre > express > connect > formidable@1.0.17: Old versions of Formidable are not compatible with the current Node.js; Upgrade to 1.2.0 or later
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.6"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@~0.5.0"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.3"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.5.1"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@~0.2.0"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.4.4"
+warning karma-remap-istanbul > remap-istanbul > gulp-util@3.0.7: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.1.41"
+warning Resolution field "source-map@0.6.1" is incompatible with requested version "source-map@^0.4.2"
+[3/5] Fetching packages...
+info fsevents@1.1.3: The platform "linux" is incompatible with this module.
+info "fsevents@1.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+[4/5] Linking dependencies...
+warning " > bootstrap@4.0.0" has unmet peer dependency "popper.js@^1.12.9".
+[5/5] Building fresh packages...
+success Saved lockfile.
+$ node node_modules/phantomjs-prebuilt/install.js
+Found PhantomJS at /home/braja/Desktop/Projects/JHipster/code/edu/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs ...verifying
+PhantomJS is previously installed at /home/braja/Desktop/Projects/JHipster/code/edu/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
+Done in 40.45s.
+yarn run v1.3.2
+$ yarn run cleanup && yarn run webpack:build:main
+$ rimraf target/{aot,www}
+$ yarn run webpack -- --config webpack/webpack.dev.js --progress --profile
+warning From Yarn 1.0 onwards, scripts don't require "--" for options to be forwarded. In a future version, any explicit "--" will be forwarded as-is to the scripts.
+$ node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js --config webpack/webpack.dev.js --progress --profile
+ 10% building modules 1/4 modules 3 active .../main/webapp/content/scss/global.scssWarning: The 'no-unused-variable' rule requires type infomation.
+
+[at-loader] Using typescript@2.6.2 from typescript and "tsconfig.json" from /home/braja/Desktop/Projects/JHipster/code/edu/tsconfig.json.
+
+12760ms building modules                                                                
+16ms sealing
+0ms optimizing 
+0ms basic module optimization 
+11ms module optimization
+0ms advanced module optimization 
+33ms basic chunk optimization       
+1ms chunk optimization 
+0ms advanced chunk optimization 
+0ms module and chunk tree optimization 
+0ms chunk modules optimization 
+0ms advanced chunk modules optimization 
+8ms module reviving 
+23ms module order optimization
+8ms module id optimization 
+6ms chunk reviving 
+1ms chunk order optimization 
+24ms chunk id optimization
+41ms hashing
+1ms module assets processing 
+3784ms chunk assets processing
+129ms additional chunk assets processing
+2ms recording 
+0ms additional asset processing 
+0ms chunk asset optimization 
+ 94% asset optimization
+[at-loader] Checking started in a separate process...
+
+[at-loader] Ok, 0.208 sec.
+MergetJsonsWebpackPlugin compilation started...
+MergetJsonsWebpackPlugin compilation completed...
+368ms asset optimization
+ 95% emittingMergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+149ms emitting
+Hash: 077681343d57a0439c96
+Version: webpack 3.10.0
+Time: 17559ms
+ 45 assets
+[./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./src/main/webapp/content/scss/global.scss] ./node_modules/css-loader!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js!./src/main/webapp/content/scss/global.scss 5.22 kB {3} [built]
+       [] -> factory:7ms building:8298ms = 8305ms
+[./src/main/webapp/app/app.main.ts] ./src/main/webapp/app/app.main.ts 582 bytes {2} [built]
+        factory:435ms building:3001ms = 3436ms
+[./src/main/webapp/app/app.module.ts] ./src/main/webapp/app/app.module.ts 4.1 kB {2} [built]
+       [] -> factory:48ms building:177ms = 225ms
+[./src/main/webapp/app/blocks/config/prod.config.ts] ./src/main/webapp/app/blocks/config/prod.config.ts 391 bytes {2} [built]
+       [] -> factory:68ms building:175ms dependencies:770ms = 1013ms
+[./src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts 1.91 kB {2} [built]
+       [] -> factory:52ms building:419ms dependencies:844ms = 1315ms
+[./src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts 1.03 kB {2} [built]
+       [] -> factory:52ms building:474ms dependencies:789ms = 1315ms
+[./src/main/webapp/app/blocks/interceptor/notification.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/notification.interceptor.ts 1.78 kB {2} [built]
+       [] -> factory:52ms building:536ms dependencies:727ms = 1315ms
+[./src/main/webapp/app/entities/entity.module.ts] ./src/main/webapp/app/entities/entity.module.ts 1.24 kB {2} [built]
+       [] -> factory:54ms building:640ms dependencies:94ms = 788ms
+[./src/main/webapp/app/home/home.module.ts] ./src/main/webapp/app/home/home.module.ts 1.41 kB {2} [built]
+       [] -> factory:53ms building:549ms dependencies:1270ms = 1872ms
+[./src/main/webapp/app/layouts/index.ts] ./src/main/webapp/app/layouts/index.ts 670 bytes {2} [built]
+       [] -> factory:768ms building:104ms = 872ms
+[./src/main/webapp/app/polyfills.ts] ./src/main/webapp/app/polyfills.ts 2.66 kB {1} [built]
+        factory:206ms building:3152ms = 3358ms
+[./src/main/webapp/app/shared/auth/state-storage.service.ts] ./src/main/webapp/app/shared/auth/state-storage.service.ts 2.84 kB {2} [built]
+       [] -> factory:54ms building:679ms dependencies:60ms = 793ms
+[./src/main/webapp/app/shared/index.ts] ./src/main/webapp/app/shared/index.ts 1.35 kB {2} [built]
+       [] -> factory:763ms building:90ms dependencies:5723ms = 6576ms
+[./src/main/webapp/content/scss/global.scss] ./src/main/webapp/content/scss/global.scss 1.38 kB {3} [built]
+        factory:435ms building:28ms = 463ms
+[./src/main/webapp/manifest.webapp] ./src/main/webapp/manifest.webapp 61 bytes {1} [built]
+       [] -> factory:553ms dependencies:5760ms building:6336ms = 12649ms
+    + 673 hidden modules
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+Done in 20.30s.
+If you find JHipster useful consider supporting our collective https://opencollective.com/generator-jhipster
+
+Server application generated successfully.
+
+Run your Spring Boot application:
+ ./mvnw
+
+Client application generated successfully.
+
+Start your Webpack development server with:
+ yarn start
+
+Congratulations, JHipster execution is complete!
+Application successfully committed to Git.
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ jhipster import-jdl jhipster-jdl.jh
+Using JHipster version installed locally in current project's node_modules
+Executing jhipster:import-jdl jhipster-jdl.jh
+Options: 
+The jdl is being parsed.
+warn: The method 'JDLParser::parse' is deprecated and will be removed in the next major release. Please use 'JDLParser::parseFromConfigurationObject' instead.
+Writing entity JSON files.
+Updated entities are: Organization,Division,Employee,Course,Subject,Enquiry,FollowUp,Student,Enroll,Payment,Batch,Schedule,Classroom,ClassLog
+Generating entities.
+
+Found the .jhipster/Organization.json configuration file, entity can be automatically generated!
+
+
+The entity Organization is being updated.
+
+
+Found the .jhipster/Division.json configuration file, entity can be automatically generated!
+
+
+The entity Division is being updated.
+
+
+Found the .jhipster/Employee.json configuration file, entity can be automatically generated!
+
+
+The entity Employee is being updated.
+
+
+Found the .jhipster/Course.json configuration file, entity can be automatically generated!
+
+
+The entity Course is being updated.
+
+
+Found the .jhipster/Subject.json configuration file, entity can be automatically generated!
+
+
+The entity Subject is being updated.
+
+
+Found the .jhipster/Enquiry.json configuration file, entity can be automatically generated!
+
+
+The entity Enquiry is being updated.
+
+
+Found the .jhipster/FollowUp.json configuration file, entity can be automatically generated!
+
+
+The entity FollowUp is being updated.
+
+
+Found the .jhipster/Student.json configuration file, entity can be automatically generated!
+
+
+The entity Student is being updated.
+
+
+Found the .jhipster/Enroll.json configuration file, entity can be automatically generated!
+
+
+The entity Enroll is being updated.
+
+
+Found the .jhipster/Payment.json configuration file, entity can be automatically generated!
+
+
+The entity Payment is being updated.
+
+
+Found the .jhipster/Batch.json configuration file, entity can be automatically generated!
+
+
+The entity Batch is being updated.
+
+
+Found the .jhipster/Schedule.json configuration file, entity can be automatically generated!
+
+
+The entity Schedule is being updated.
+
+
+Found the .jhipster/Classroom.json configuration file, entity can be automatically generated!
+
+
+The entity Classroom is being updated.
+
+
+Found the .jhipster/ClassLog.json configuration file, entity can be automatically generated!
+
+
+The entity ClassLog is being updated.
+
+   create src/main/resources/config/liquibase/changelog/20180324222804_added_entity_Organization.xml
+   create src/main/java/com/edu/domain/Organization.java
+   create src/main/java/com/edu/repository/OrganizationRepository.java
+   create src/main/java/com/edu/web/rest/OrganizationResource.java
+   create src/main/java/com/edu/service/OrganizationService.java
+   create src/main/java/com/edu/service/impl/OrganizationServiceImpl.java
+   create src/main/java/com/edu/service/dto/OrganizationDTO.java
+   create src/main/java/com/edu/service/mapper/EntityMapper.java
+   create src/main/java/com/edu/service/mapper/OrganizationMapper.java
+   create src/test/java/com/edu/web/rest/OrganizationResourceIntTest.java
+ conflict src/main/resources/config/liquibase/master.xml
+? Overwrite src/main/resources/config/liquibase/master.xml? overwrite this and all others
+    force src/main/resources/config/liquibase/master.xml
+   create src/main/java/com/edu/domain/enumeration/Status.java
+   create src/main/java/com/edu/domain/enumeration/AccountStatus.java
+   create src/main/webapp/app/entities/organization-bli/organization-bli.component.html
+   create src/main/webapp/app/entities/organization-bli/organization-bli-detail.component.html
+   create src/main/webapp/app/entities/organization-bli/organization-bli-dialog.component.html
+   create src/main/webapp/app/entities/organization-bli/organization-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/organization-bli/index.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli.module.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli.route.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli.model.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli.component.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli-dialog.component.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli-detail.component.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli.service.ts
+   create src/main/webapp/app/entities/organization-bli/organization-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/organization-bli/organization-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/organization-bli/organization-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/organization-bli/organization-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/organization-bli/organization-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/organization-bli/organization-bli.service.spec.ts
+    force src/main/webapp/app/entities/entity.module.ts
+    force src/main/webapp/app/layouts/navbar/navbar.component.html
+   create src/main/webapp/i18n/en/status.json
+   create src/main/webapp/i18n/hi/status.json
+   create src/main/webapp/i18n/mr/status.json
+   create src/main/webapp/i18n/ta/status.json
+   create src/main/webapp/i18n/en/accountStatus.json
+   create src/main/webapp/i18n/hi/accountStatus.json
+   create src/main/webapp/i18n/mr/accountStatus.json
+   create src/main/webapp/i18n/ta/accountStatus.json
+   create src/main/webapp/i18n/en/organization.json
+    force src/main/webapp/i18n/en/global.json
+   create src/main/webapp/i18n/hi/organization.json
+    force src/main/webapp/i18n/hi/global.json
+   create src/main/webapp/i18n/mr/organization.json
+    force src/main/webapp/i18n/mr/global.json
+   create src/main/webapp/i18n/ta/organization.json
+    force src/main/webapp/i18n/ta/global.json
+   create src/main/resources/config/liquibase/changelog/20180324222805_added_entity_Division.xml
+   create src/main/resources/config/liquibase/changelog/20180324222805_added_entity_constraints_Division.xml
+   create src/main/java/com/edu/domain/Division.java
+   create src/main/java/com/edu/repository/DivisionRepository.java
+   create src/main/java/com/edu/web/rest/DivisionResource.java
+   create src/main/java/com/edu/service/DivisionService.java
+   create src/main/java/com/edu/service/impl/DivisionServiceImpl.java
+   create src/main/java/com/edu/service/dto/DivisionDTO.java
+   create src/main/java/com/edu/service/mapper/DivisionMapper.java
+   create src/test/java/com/edu/web/rest/DivisionResourceIntTest.java
+   create src/main/webapp/app/entities/division-bli/division-bli.component.html
+   create src/main/webapp/app/entities/division-bli/division-bli-detail.component.html
+   create src/main/webapp/app/entities/division-bli/division-bli-dialog.component.html
+   create src/main/webapp/app/entities/division-bli/division-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/division-bli/index.ts
+   create src/main/webapp/app/entities/division-bli/division-bli.module.ts
+   create src/main/webapp/app/entities/division-bli/division-bli.route.ts
+   create src/main/webapp/app/entities/division-bli/division-bli.model.ts
+   create src/main/webapp/app/entities/division-bli/division-bli.component.ts
+   create src/main/webapp/app/entities/division-bli/division-bli-dialog.component.ts
+   create src/main/webapp/app/entities/division-bli/division-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/division-bli/division-bli-detail.component.ts
+   create src/main/webapp/app/entities/division-bli/division-bli.service.ts
+   create src/main/webapp/app/entities/division-bli/division-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/division-bli/division-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/division-bli/division-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/division-bli/division-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/division-bli/division-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/division-bli/division-bli.service.spec.ts
+   create src/main/webapp/i18n/en/division.json
+   create src/main/webapp/i18n/hi/division.json
+   create src/main/webapp/i18n/mr/division.json
+   create src/main/webapp/i18n/ta/division.json
+   create src/main/resources/config/liquibase/changelog/20180324222806_added_entity_Employee.xml
+   create src/main/resources/config/liquibase/changelog/20180324222806_added_entity_constraints_Employee.xml
+   create src/main/java/com/edu/domain/Employee.java
+   create src/main/java/com/edu/repository/EmployeeRepository.java
+   create src/main/java/com/edu/web/rest/EmployeeResource.java
+   create src/main/java/com/edu/service/EmployeeService.java
+   create src/main/java/com/edu/service/impl/EmployeeServiceImpl.java
+   create src/main/java/com/edu/service/dto/EmployeeDTO.java
+   create src/main/java/com/edu/service/mapper/EmployeeMapper.java
+   create src/test/java/com/edu/web/rest/EmployeeResourceIntTest.java
+   create src/main/java/com/edu/domain/enumeration/JobType.java
+   create src/main/webapp/app/entities/employee-bli/employee-bli.component.html
+   create src/main/webapp/app/entities/employee-bli/employee-bli-detail.component.html
+   create src/main/webapp/app/entities/employee-bli/employee-bli-dialog.component.html
+   create src/main/webapp/app/entities/employee-bli/employee-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/employee-bli/index.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli.module.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli.route.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli.model.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli.component.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli-dialog.component.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli-detail.component.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli.service.ts
+   create src/main/webapp/app/entities/employee-bli/employee-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/employee-bli/employee-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/employee-bli/employee-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/employee-bli/employee-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/employee-bli/employee-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/employee-bli/employee-bli.service.spec.ts
+   create src/main/webapp/i18n/en/jobType.json
+   create src/main/webapp/i18n/hi/jobType.json
+   create src/main/webapp/i18n/mr/jobType.json
+   create src/main/webapp/i18n/ta/jobType.json
+   create src/main/webapp/i18n/en/employee.json
+   create src/main/webapp/i18n/hi/employee.json
+   create src/main/webapp/i18n/mr/employee.json
+   create src/main/webapp/i18n/ta/employee.json
+   create src/main/resources/config/liquibase/changelog/20180324222807_added_entity_Course.xml
+   create src/main/resources/config/liquibase/changelog/20180324222807_added_entity_constraints_Course.xml
+   create src/main/java/com/edu/domain/Course.java
+   create src/main/java/com/edu/repository/CourseRepository.java
+   create src/main/java/com/edu/web/rest/CourseResource.java
+   create src/main/java/com/edu/service/CourseService.java
+   create src/main/java/com/edu/service/impl/CourseServiceImpl.java
+   create src/main/java/com/edu/service/dto/CourseDTO.java
+   create src/main/java/com/edu/service/mapper/CourseMapper.java
+   create src/test/java/com/edu/web/rest/CourseResourceIntTest.java
+   create src/main/webapp/app/entities/course-bli/course-bli.component.html
+   create src/main/webapp/app/entities/course-bli/course-bli-detail.component.html
+   create src/main/webapp/app/entities/course-bli/course-bli-dialog.component.html
+   create src/main/webapp/app/entities/course-bli/course-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/course-bli/index.ts
+   create src/main/webapp/app/entities/course-bli/course-bli.module.ts
+   create src/main/webapp/app/entities/course-bli/course-bli.route.ts
+   create src/main/webapp/app/entities/course-bli/course-bli.model.ts
+   create src/main/webapp/app/entities/course-bli/course-bli.component.ts
+   create src/main/webapp/app/entities/course-bli/course-bli-dialog.component.ts
+   create src/main/webapp/app/entities/course-bli/course-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/course-bli/course-bli-detail.component.ts
+   create src/main/webapp/app/entities/course-bli/course-bli.service.ts
+   create src/main/webapp/app/entities/course-bli/course-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/course-bli/course-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/course-bli/course-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/course-bli/course-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/course-bli/course-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/course-bli/course-bli.service.spec.ts
+   create src/main/webapp/i18n/en/course.json
+   create src/main/webapp/i18n/hi/course.json
+   create src/main/webapp/i18n/mr/course.json
+   create src/main/webapp/i18n/ta/course.json
+   create src/main/resources/config/liquibase/changelog/20180324222808_added_entity_Subject.xml
+   create src/main/resources/config/liquibase/changelog/20180324222808_added_entity_constraints_Subject.xml
+   create src/main/java/com/edu/domain/Subject.java
+   create src/main/java/com/edu/repository/SubjectRepository.java
+   create src/main/java/com/edu/web/rest/SubjectResource.java
+   create src/main/java/com/edu/service/SubjectService.java
+   create src/main/java/com/edu/service/impl/SubjectServiceImpl.java
+   create src/main/java/com/edu/service/dto/SubjectDTO.java
+   create src/main/java/com/edu/service/mapper/SubjectMapper.java
+   create src/test/java/com/edu/web/rest/SubjectResourceIntTest.java
+   create src/main/webapp/app/entities/subject-bli/subject-bli.component.html
+   create src/main/webapp/app/entities/subject-bli/subject-bli-detail.component.html
+   create src/main/webapp/app/entities/subject-bli/subject-bli-dialog.component.html
+   create src/main/webapp/app/entities/subject-bli/subject-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/subject-bli/index.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli.module.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli.route.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli.model.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli.component.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli-dialog.component.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli-detail.component.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli.service.ts
+   create src/main/webapp/app/entities/subject-bli/subject-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/subject-bli/subject-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/subject-bli/subject-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/subject-bli/subject-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/subject-bli/subject-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/subject-bli/subject-bli.service.spec.ts
+   create src/main/webapp/i18n/en/subject.json
+   create src/main/webapp/i18n/hi/subject.json
+   create src/main/webapp/i18n/mr/subject.json
+   create src/main/webapp/i18n/ta/subject.json
+   create src/main/resources/config/liquibase/changelog/20180324222809_added_entity_Enquiry.xml
+   create src/main/resources/config/liquibase/changelog/20180324222809_added_entity_constraints_Enquiry.xml
+   create src/main/java/com/edu/domain/Enquiry.java
+   create src/main/java/com/edu/repository/EnquiryRepository.java
+   create src/main/java/com/edu/web/rest/EnquiryResource.java
+   create src/main/java/com/edu/service/EnquiryService.java
+   create src/main/java/com/edu/service/impl/EnquiryServiceImpl.java
+   create src/main/java/com/edu/service/dto/EnquiryDTO.java
+   create src/main/java/com/edu/service/mapper/EnquiryMapper.java
+   create src/test/java/com/edu/web/rest/EnquiryResourceIntTest.java
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.component.html
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-detail.component.html
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-dialog.component.html
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/enquiry-bli/index.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.module.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.route.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.model.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.component.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-dialog.component.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-detail.component.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli.service.ts
+   create src/main/webapp/app/entities/enquiry-bli/enquiry-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli.service.spec.ts
+   create src/main/webapp/i18n/en/enquiry.json
+   create src/main/webapp/i18n/hi/enquiry.json
+   create src/main/webapp/i18n/mr/enquiry.json
+   create src/main/webapp/i18n/ta/enquiry.json
+   create src/main/resources/config/liquibase/changelog/20180324222810_added_entity_FollowUp.xml
+   create src/main/resources/config/liquibase/changelog/20180324222810_added_entity_constraints_FollowUp.xml
+   create src/main/java/com/edu/domain/FollowUp.java
+   create src/main/java/com/edu/repository/FollowUpRepository.java
+   create src/main/java/com/edu/web/rest/FollowUpResource.java
+   create src/main/java/com/edu/service/FollowUpService.java
+   create src/main/java/com/edu/service/impl/FollowUpServiceImpl.java
+   create src/main/java/com/edu/service/dto/FollowUpDTO.java
+   create src/main/java/com/edu/service/mapper/FollowUpMapper.java
+   create src/test/java/com/edu/web/rest/FollowUpResourceIntTest.java
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.component.html
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-detail.component.html
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-dialog.component.html
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/follow-up-bli/index.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.module.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.route.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.model.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.component.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-dialog.component.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-detail.component.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli.service.ts
+   create src/main/webapp/app/entities/follow-up-bli/follow-up-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli.service.spec.ts
+   create src/main/webapp/i18n/en/followUp.json
+   create src/main/webapp/i18n/hi/followUp.json
+   create src/main/webapp/i18n/mr/followUp.json
+   create src/main/webapp/i18n/ta/followUp.json
+   create src/main/resources/config/liquibase/changelog/20180324222811_added_entity_Student.xml
+   create src/main/resources/config/liquibase/changelog/20180324222811_added_entity_constraints_Student.xml
+   create src/main/java/com/edu/domain/Student.java
+   create src/main/java/com/edu/repository/StudentRepository.java
+   create src/main/java/com/edu/web/rest/StudentResource.java
+   create src/main/java/com/edu/service/StudentService.java
+   create src/main/java/com/edu/service/impl/StudentServiceImpl.java
+   create src/main/java/com/edu/service/dto/StudentDTO.java
+   create src/main/java/com/edu/service/mapper/StudentMapper.java
+   create src/test/java/com/edu/web/rest/StudentResourceIntTest.java
+   create src/main/webapp/app/entities/student-bli/student-bli.component.html
+   create src/main/webapp/app/entities/student-bli/student-bli-detail.component.html
+   create src/main/webapp/app/entities/student-bli/student-bli-dialog.component.html
+   create src/main/webapp/app/entities/student-bli/student-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/student-bli/index.ts
+   create src/main/webapp/app/entities/student-bli/student-bli.module.ts
+   create src/main/webapp/app/entities/student-bli/student-bli.route.ts
+   create src/main/webapp/app/entities/student-bli/student-bli.model.ts
+   create src/main/webapp/app/entities/student-bli/student-bli.component.ts
+   create src/main/webapp/app/entities/student-bli/student-bli-dialog.component.ts
+   create src/main/webapp/app/entities/student-bli/student-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/student-bli/student-bli-detail.component.ts
+   create src/main/webapp/app/entities/student-bli/student-bli.service.ts
+   create src/main/webapp/app/entities/student-bli/student-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/student-bli/student-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/student-bli/student-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/student-bli/student-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/student-bli/student-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/student-bli/student-bli.service.spec.ts
+   create src/main/webapp/i18n/en/student.json
+   create src/main/webapp/i18n/hi/student.json
+   create src/main/webapp/i18n/mr/student.json
+   create src/main/webapp/i18n/ta/student.json
+   create src/main/resources/config/liquibase/changelog/20180324222812_added_entity_Enroll.xml
+   create src/main/resources/config/liquibase/changelog/20180324222812_added_entity_constraints_Enroll.xml
+   create src/main/java/com/edu/domain/Enroll.java
+   create src/main/java/com/edu/repository/EnrollRepository.java
+   create src/main/java/com/edu/web/rest/EnrollResource.java
+   create src/main/java/com/edu/service/EnrollService.java
+   create src/main/java/com/edu/service/impl/EnrollServiceImpl.java
+   create src/main/java/com/edu/service/dto/EnrollDTO.java
+   create src/main/java/com/edu/service/mapper/EnrollMapper.java
+   create src/test/java/com/edu/web/rest/EnrollResourceIntTest.java
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.component.html
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-detail.component.html
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-dialog.component.html
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/enroll-bli/index.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.module.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.route.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.model.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.component.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-dialog.component.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-detail.component.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli.service.ts
+   create src/main/webapp/app/entities/enroll-bli/enroll-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/enroll-bli/enroll-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/enroll-bli/enroll-bli.service.spec.ts
+   create src/main/webapp/i18n/en/enroll.json
+   create src/main/webapp/i18n/hi/enroll.json
+   create src/main/webapp/i18n/mr/enroll.json
+   create src/main/webapp/i18n/ta/enroll.json
+   create src/main/resources/config/liquibase/changelog/20180324222813_added_entity_Payment.xml
+   create src/main/resources/config/liquibase/changelog/20180324222813_added_entity_constraints_Payment.xml
+   create src/main/java/com/edu/domain/Payment.java
+   create src/main/java/com/edu/repository/PaymentRepository.java
+   create src/main/java/com/edu/web/rest/PaymentResource.java
+   create src/main/java/com/edu/service/PaymentService.java
+   create src/main/java/com/edu/service/impl/PaymentServiceImpl.java
+   create src/main/java/com/edu/service/dto/PaymentDTO.java
+   create src/main/java/com/edu/service/mapper/PaymentMapper.java
+   create src/test/java/com/edu/web/rest/PaymentResourceIntTest.java
+   create src/main/webapp/app/entities/payment-bli/payment-bli.component.html
+   create src/main/webapp/app/entities/payment-bli/payment-bli-detail.component.html
+   create src/main/webapp/app/entities/payment-bli/payment-bli-dialog.component.html
+   create src/main/webapp/app/entities/payment-bli/payment-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/payment-bli/index.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli.module.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli.route.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli.model.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli.component.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli-dialog.component.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli-detail.component.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli.service.ts
+   create src/main/webapp/app/entities/payment-bli/payment-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/payment-bli/payment-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/payment-bli/payment-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/payment-bli/payment-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/payment-bli/payment-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/payment-bli/payment-bli.service.spec.ts
+   create src/main/webapp/i18n/en/payment.json
+   create src/main/webapp/i18n/hi/payment.json
+   create src/main/webapp/i18n/mr/payment.json
+   create src/main/webapp/i18n/ta/payment.json
+   create src/main/resources/config/liquibase/changelog/20180324222814_added_entity_Batch.xml
+   create src/main/resources/config/liquibase/changelog/20180324222814_added_entity_constraints_Batch.xml
+   create src/main/java/com/edu/domain/Batch.java
+   create src/main/java/com/edu/repository/BatchRepository.java
+   create src/main/java/com/edu/web/rest/BatchResource.java
+   create src/main/java/com/edu/service/BatchService.java
+   create src/main/java/com/edu/service/impl/BatchServiceImpl.java
+   create src/main/java/com/edu/service/dto/BatchDTO.java
+   create src/main/java/com/edu/service/mapper/BatchMapper.java
+   create src/test/java/com/edu/web/rest/BatchResourceIntTest.java
+   create src/main/webapp/app/entities/batch-bli/batch-bli.component.html
+   create src/main/webapp/app/entities/batch-bli/batch-bli-detail.component.html
+   create src/main/webapp/app/entities/batch-bli/batch-bli-dialog.component.html
+   create src/main/webapp/app/entities/batch-bli/batch-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/batch-bli/index.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli.module.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli.route.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli.model.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli.component.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli-dialog.component.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli-detail.component.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli.service.ts
+   create src/main/webapp/app/entities/batch-bli/batch-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/batch-bli/batch-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/batch-bli/batch-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/batch-bli/batch-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/batch-bli/batch-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/batch-bli/batch-bli.service.spec.ts
+   create src/main/webapp/i18n/en/batch.json
+   create src/main/webapp/i18n/hi/batch.json
+   create src/main/webapp/i18n/mr/batch.json
+   create src/main/webapp/i18n/ta/batch.json
+   create src/main/resources/config/liquibase/changelog/20180324222815_added_entity_Schedule.xml
+   create src/main/resources/config/liquibase/changelog/20180324222815_added_entity_constraints_Schedule.xml
+   create src/main/java/com/edu/domain/Schedule.java
+   create src/main/java/com/edu/repository/ScheduleRepository.java
+   create src/main/java/com/edu/web/rest/ScheduleResource.java
+   create src/main/java/com/edu/service/ScheduleService.java
+   create src/main/java/com/edu/service/impl/ScheduleServiceImpl.java
+   create src/main/java/com/edu/service/dto/ScheduleDTO.java
+   create src/main/java/com/edu/service/mapper/ScheduleMapper.java
+   create src/test/java/com/edu/web/rest/ScheduleResourceIntTest.java
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.component.html
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-detail.component.html
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-dialog.component.html
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/schedule-bli/index.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.module.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.route.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.model.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.component.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-dialog.component.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-detail.component.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli.service.ts
+   create src/main/webapp/app/entities/schedule-bli/schedule-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/schedule-bli/schedule-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/schedule-bli/schedule-bli.service.spec.ts
+   create src/main/webapp/i18n/en/schedule.json
+   create src/main/webapp/i18n/hi/schedule.json
+   create src/main/webapp/i18n/mr/schedule.json
+   create src/main/webapp/i18n/ta/schedule.json
+   create src/main/resources/config/liquibase/changelog/20180324222816_added_entity_Classroom.xml
+   create src/main/resources/config/liquibase/changelog/20180324222816_added_entity_constraints_Classroom.xml
+   create src/main/java/com/edu/domain/Classroom.java
+   create src/main/java/com/edu/repository/ClassroomRepository.java
+   create src/main/java/com/edu/web/rest/ClassroomResource.java
+   create src/main/java/com/edu/service/ClassroomService.java
+   create src/main/java/com/edu/service/impl/ClassroomServiceImpl.java
+   create src/main/java/com/edu/service/dto/ClassroomDTO.java
+   create src/main/java/com/edu/service/mapper/ClassroomMapper.java
+   create src/test/java/com/edu/web/rest/ClassroomResourceIntTest.java
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.component.html
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-detail.component.html
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-dialog.component.html
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/classroom-bli/index.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.module.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.route.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.model.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.component.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-dialog.component.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-detail.component.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli.service.ts
+   create src/main/webapp/app/entities/classroom-bli/classroom-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/classroom-bli/classroom-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/classroom-bli/classroom-bli.service.spec.ts
+   create src/main/webapp/i18n/en/classroom.json
+   create src/main/webapp/i18n/hi/classroom.json
+   create src/main/webapp/i18n/mr/classroom.json
+   create src/main/webapp/i18n/ta/classroom.json
+   create src/main/resources/config/liquibase/changelog/20180324222817_added_entity_ClassLog.xml
+   create src/main/resources/config/liquibase/changelog/20180324222817_added_entity_constraints_ClassLog.xml
+   create src/main/java/com/edu/domain/ClassLog.java
+   create src/main/java/com/edu/repository/ClassLogRepository.java
+   create src/main/java/com/edu/web/rest/ClassLogResource.java
+   create src/main/java/com/edu/service/ClassLogService.java
+   create src/main/java/com/edu/service/impl/ClassLogServiceImpl.java
+   create src/main/java/com/edu/service/dto/ClassLogDTO.java
+   create src/main/java/com/edu/service/mapper/ClassLogMapper.java
+   create src/test/java/com/edu/web/rest/ClassLogResourceIntTest.java
+   create src/main/java/com/edu/domain/enumeration/LogType.java
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.component.html
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-detail.component.html
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-dialog.component.html
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-delete-dialog.component.html
+   create src/main/webapp/app/entities/class-log-bli/index.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.module.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.route.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.model.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.component.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-dialog.component.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-delete-dialog.component.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-detail.component.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli.service.ts
+   create src/main/webapp/app/entities/class-log-bli/class-log-bli-popup.service.ts
+   create src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-detail.component.spec.ts
+   create src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-delete-dialog.component.spec.ts
+   create src/test/javascript/spec/app/entities/class-log-bli/class-log-bli.component.spec.ts
+   create src/test/javascript/spec/app/entities/class-log-bli/class-log-bli.service.spec.ts
+   create src/main/webapp/i18n/en/logType.json
+   create src/main/webapp/i18n/hi/logType.json
+   create src/main/webapp/i18n/mr/logType.json
+   create src/main/webapp/i18n/ta/logType.json
+   create src/main/webapp/i18n/en/classLog.json
+   create src/main/webapp/i18n/hi/classLog.json
+   create src/main/webapp/i18n/mr/classLog.json
+   create src/main/webapp/i18n/ta/classLog.json
+
+Running `webpack:build` to update client app
+
+yarn run v1.3.2
+$ yarn run cleanup && yarn run webpack:build:main
+$ rimraf target/{aot,www}
+$ yarn run webpack -- --config webpack/webpack.dev.js --progress --profile
+warning From Yarn 1.0 onwards, scripts don't require "--" for options to be forwarded. In a future version, any explicit "--" will be forwarded as-is to the scripts.
+$ node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js --config webpack/webpack.dev.js --progress --profile
+ 10% building modules 1/4 modules 3 active .../main/webapp/content/scss/global.scssWarning: The 'no-unused-variable' rule requires type infomation.
+
+[at-loader] Using typescript@2.6.2 from typescript and "tsconfig.json" from /home/braja/Desktop/Projects/JHipster/code/edu/tsconfig.json.
+
+20504ms building modules                                                                
+43ms sealing
+0ms optimizing 
+0ms basic module optimization 
+28ms module optimization
+1ms advanced module optimization 
+18ms basic chunk optimization       
+0ms chunk optimization 
+0ms advanced chunk optimization 
+1ms module and chunk tree optimization 
+0ms chunk modules optimization 
+0ms advanced chunk modules optimization 
+9ms module reviving 
+7ms module order optimization 
+14ms module id optimization
+4ms chunk reviving 
+0ms chunk order optimization 
+23ms chunk id optimization
+36ms hashing
+1ms module assets processing 
+3680ms chunk assets processing
+281ms additional chunk assets processing
+0ms recording 
+0ms additional asset processing 
+0ms chunk asset optimization 
+ 94% asset optimization
+[at-loader] Checking started in a separate process...
+
+[at-loader] Ok, 0.523 sec.
+MergetJsonsWebpackPlugin compilation started...
+MergetJsonsWebpackPlugin compilation completed...
+670ms asset optimization
+ 95% emittingMergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+145ms emitting
+Hash: 40efc610ae8b2d4af1e9
+Version: webpack 3.10.0
+Time: 25649ms
+ 45 assets
+[./node_modules/css-loader/index.js!./node_modules/postcss-loader/lib/index.js!./node_modules/sass-loader/lib/loader.js!./src/main/webapp/content/scss/global.scss] ./node_modules/css-loader!./node_modules/postcss-loader/lib!./node_modules/sass-loader/lib/loader.js!./src/main/webapp/content/scss/global.scss 5.22 kB {3} [built]
+       [] -> factory:3ms building:10009ms = 10012ms
+[./src/main/webapp/app/app.main.ts] ./src/main/webapp/app/app.main.ts 582 bytes {0} [built]
+        factory:447ms building:3632ms = 4079ms
+[./src/main/webapp/app/app.module.ts] ./src/main/webapp/app/app.module.ts 4.1 kB {0} [built]
+       [] -> factory:27ms building:156ms = 183ms
+[./src/main/webapp/app/blocks/config/prod.config.ts] ./src/main/webapp/app/blocks/config/prod.config.ts 391 bytes {0} [built]
+       [] -> factory:44ms building:156ms dependencies:771ms = 971ms
+[./src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/auth-expired.interceptor.ts 1.91 kB {0} [built]
+       [] -> factory:36ms building:409ms dependencies:12108ms = 12553ms
+[./src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/errorhandler.interceptor.ts 1.03 kB {0} [built]
+       [] -> factory:36ms building:470ms dependencies:762ms = 1268ms
+[./src/main/webapp/app/blocks/interceptor/notification.interceptor.ts] ./src/main/webapp/app/blocks/interceptor/notification.interceptor.ts 1.78 kB {0} [built]
+       [] -> factory:36ms building:527ms dependencies:705ms = 1268ms
+[./src/main/webapp/app/entities/entity.module.ts] ./src/main/webapp/app/entities/entity.module.ts 3.15 kB {0} [built]
+       [] -> factory:37ms building:633ms dependencies:148ms = 818ms
+[./src/main/webapp/app/home/home.module.ts] ./src/main/webapp/app/home/home.module.ts 1.41 kB {0} [built]
+       [] -> factory:37ms building:558ms dependencies:1842ms = 2437ms
+[./src/main/webapp/app/layouts/index.ts] ./src/main/webapp/app/layouts/index.ts 670 bytes {0} [built]
+       [] -> factory:777ms building:91ms = 868ms
+[./src/main/webapp/app/polyfills.ts] ./src/main/webapp/app/polyfills.ts 2.66 kB {2} [built]
+        factory:200ms building:3810ms = 4010ms
+[./src/main/webapp/app/shared/auth/state-storage.service.ts] ./src/main/webapp/app/shared/auth/state-storage.service.ts 2.84 kB {0} [built]
+       [] -> factory:38ms building:684ms dependencies:71ms = 793ms
+[./src/main/webapp/app/shared/index.ts] ./src/main/webapp/app/shared/index.ts 1.35 kB {0} [built]
+       [] -> factory:775ms building:80ms dependencies:11545ms = 12400ms
+[./src/main/webapp/content/scss/global.scss] ./src/main/webapp/content/scss/global.scss 1.38 kB {3} [built]
+        factory:447ms building:23ms = 470ms
+[./src/main/webapp/manifest.webapp] ./src/main/webapp/manifest.webapp 61 bytes {2} [built]
+       [] -> factory:520ms dependencies:1ms building:1147ms = 1668ms
+    + 869 hidden modules
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+MergetJsonsWebpackPlugin emit starts...
+MergetJsonsWebpackPlugin emit completed...
+Done in 28.06s.
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Entity generation completed
+Congratulations, JHipster execution is complete!
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++                    GIT                    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ git init
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ git add .
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ git commit -m "First Commit"
+[master 5f1f6a2] First Commit
+ 504 files changed, 33843 insertions(+)
+ create mode 100644 .jhipster/Batch.json
+ create mode 100644 .jhipster/ClassLog.json
+ create mode 100644 .jhipster/Classroom.json
+ create mode 100644 .jhipster/Course.json
+ create mode 100644 .jhipster/Division.json
+ create mode 100644 .jhipster/Employee.json
+ create mode 100644 .jhipster/Enquiry.json
+ create mode 100644 .jhipster/Enroll.json
+ create mode 100644 .jhipster/FollowUp.json
+ create mode 100644 .jhipster/Organization.json
+ create mode 100644 .jhipster/Payment.json
+ create mode 100644 .jhipster/Schedule.json
+ create mode 100644 .jhipster/Student.json
+ create mode 100644 .jhipster/Subject.json
+ create mode 100644 jhipster-jdl.jh
+ create mode 100644 src/main/java/com/edu/domain/Batch.java
+ create mode 100644 src/main/java/com/edu/domain/ClassLog.java
+ create mode 100644 src/main/java/com/edu/domain/Classroom.java
+ create mode 100644 src/main/java/com/edu/domain/Course.java
+ create mode 100644 src/main/java/com/edu/domain/Division.java
+ create mode 100644 src/main/java/com/edu/domain/Employee.java
+ create mode 100644 src/main/java/com/edu/domain/Enquiry.java
+ create mode 100644 src/main/java/com/edu/domain/Enroll.java
+ create mode 100644 src/main/java/com/edu/domain/FollowUp.java
+ create mode 100644 src/main/java/com/edu/domain/Organization.java
+ create mode 100644 src/main/java/com/edu/domain/Payment.java
+ create mode 100644 src/main/java/com/edu/domain/Schedule.java
+ create mode 100644 src/main/java/com/edu/domain/Student.java
+ create mode 100644 src/main/java/com/edu/domain/Subject.java
+ create mode 100644 src/main/java/com/edu/domain/enumeration/AccountStatus.java
+ create mode 100644 src/main/java/com/edu/domain/enumeration/JobType.java
+ create mode 100644 src/main/java/com/edu/domain/enumeration/LogType.java
+ create mode 100644 src/main/java/com/edu/domain/enumeration/Status.java
+ create mode 100644 src/main/java/com/edu/repository/BatchRepository.java
+ create mode 100644 src/main/java/com/edu/repository/ClassLogRepository.java
+ create mode 100644 src/main/java/com/edu/repository/ClassroomRepository.java
+ create mode 100644 src/main/java/com/edu/repository/CourseRepository.java
+ create mode 100644 src/main/java/com/edu/repository/DivisionRepository.java
+ create mode 100644 src/main/java/com/edu/repository/EmployeeRepository.java
+ create mode 100644 src/main/java/com/edu/repository/EnquiryRepository.java
+ create mode 100644 src/main/java/com/edu/repository/EnrollRepository.java
+ create mode 100644 src/main/java/com/edu/repository/FollowUpRepository.java
+ create mode 100644 src/main/java/com/edu/repository/OrganizationRepository.java
+ create mode 100644 src/main/java/com/edu/repository/PaymentRepository.java
+ create mode 100644 src/main/java/com/edu/repository/ScheduleRepository.java
+ create mode 100644 src/main/java/com/edu/repository/StudentRepository.java
+ create mode 100644 src/main/java/com/edu/repository/SubjectRepository.java
+ create mode 100644 src/main/java/com/edu/service/BatchService.java
+ create mode 100644 src/main/java/com/edu/service/ClassLogService.java
+ create mode 100644 src/main/java/com/edu/service/ClassroomService.java
+ create mode 100644 src/main/java/com/edu/service/CourseService.java
+ create mode 100644 src/main/java/com/edu/service/DivisionService.java
+ create mode 100644 src/main/java/com/edu/service/EmployeeService.java
+ create mode 100644 src/main/java/com/edu/service/EnquiryService.java
+ create mode 100644 src/main/java/com/edu/service/EnrollService.java
+ create mode 100644 src/main/java/com/edu/service/FollowUpService.java
+ create mode 100644 src/main/java/com/edu/service/OrganizationService.java
+ create mode 100644 src/main/java/com/edu/service/PaymentService.java
+ create mode 100644 src/main/java/com/edu/service/ScheduleService.java
+ create mode 100644 src/main/java/com/edu/service/StudentService.java
+ create mode 100644 src/main/java/com/edu/service/SubjectService.java
+ create mode 100644 src/main/java/com/edu/service/dto/BatchDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/ClassLogDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/ClassroomDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/CourseDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/DivisionDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/EmployeeDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/EnquiryDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/EnrollDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/FollowUpDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/OrganizationDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/PaymentDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/ScheduleDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/StudentDTO.java
+ create mode 100644 src/main/java/com/edu/service/dto/SubjectDTO.java
+ create mode 100644 src/main/java/com/edu/service/impl/BatchServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/ClassLogServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/ClassroomServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/CourseServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/DivisionServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/EmployeeServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/EnquiryServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/EnrollServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/FollowUpServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/OrganizationServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/PaymentServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/ScheduleServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/StudentServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/impl/SubjectServiceImpl.java
+ create mode 100644 src/main/java/com/edu/service/mapper/BatchMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/ClassLogMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/ClassroomMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/CourseMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/DivisionMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/EmployeeMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/EnquiryMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/EnrollMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/EntityMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/FollowUpMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/OrganizationMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/PaymentMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/ScheduleMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/StudentMapper.java
+ create mode 100644 src/main/java/com/edu/service/mapper/SubjectMapper.java
+ create mode 100644 src/main/java/com/edu/web/rest/BatchResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/ClassLogResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/ClassroomResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/CourseResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/DivisionResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/EmployeeResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/EnquiryResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/EnrollResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/FollowUpResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/OrganizationResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/PaymentResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/ScheduleResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/StudentResource.java
+ create mode 100644 src/main/java/com/edu/web/rest/SubjectResource.java
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222804_added_entity_Organization.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222805_added_entity_Division.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222805_added_entity_constraints_Division.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222806_added_entity_Employee.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222806_added_entity_constraints_Employee.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222807_added_entity_Course.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222807_added_entity_constraints_Course.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222808_added_entity_Subject.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222808_added_entity_constraints_Subject.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222809_added_entity_Enquiry.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222809_added_entity_constraints_Enquiry.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222810_added_entity_FollowUp.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222810_added_entity_constraints_FollowUp.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222811_added_entity_Student.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222811_added_entity_constraints_Student.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222812_added_entity_Enroll.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222812_added_entity_constraints_Enroll.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222813_added_entity_Payment.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222813_added_entity_constraints_Payment.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222814_added_entity_Batch.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222814_added_entity_constraints_Batch.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222815_added_entity_Schedule.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222815_added_entity_constraints_Schedule.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222816_added_entity_Classroom.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222816_added_entity_constraints_Classroom.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222817_added_entity_ClassLog.xml
+ create mode 100644 src/main/resources/config/liquibase/changelog/20180324222817_added_entity_constraints_ClassLog.xml
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/batch-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/batch-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/class-log-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/class-log-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/classroom-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/classroom-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/course-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/course-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/division-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/division-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/employee-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/employee-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/enquiry-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/enquiry-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/enroll-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/enroll-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/follow-up-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/follow-up-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/organization-bli/organization-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/payment-bli/payment-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/schedule-bli/schedule-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/student-bli/student-bli.service.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/index.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-delete-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-delete-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-detail.component.html
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-detail.component.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-dialog.component.html
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-dialog.component.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli-popup.service.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.component.html
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.component.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.model.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.module.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.route.ts
+ create mode 100644 src/main/webapp/app/entities/subject-bli/subject-bli.service.ts
+ create mode 100644 src/main/webapp/i18n/en/accountStatus.json
+ create mode 100644 src/main/webapp/i18n/en/batch.json
+ create mode 100644 src/main/webapp/i18n/en/classLog.json
+ create mode 100644 src/main/webapp/i18n/en/classroom.json
+ create mode 100644 src/main/webapp/i18n/en/course.json
+ create mode 100644 src/main/webapp/i18n/en/division.json
+ create mode 100644 src/main/webapp/i18n/en/employee.json
+ create mode 100644 src/main/webapp/i18n/en/enquiry.json
+ create mode 100644 src/main/webapp/i18n/en/enroll.json
+ create mode 100644 src/main/webapp/i18n/en/followUp.json
+ create mode 100644 src/main/webapp/i18n/en/jobType.json
+ create mode 100644 src/main/webapp/i18n/en/logType.json
+ create mode 100644 src/main/webapp/i18n/en/organization.json
+ create mode 100644 src/main/webapp/i18n/en/payment.json
+ create mode 100644 src/main/webapp/i18n/en/schedule.json
+ create mode 100644 src/main/webapp/i18n/en/status.json
+ create mode 100644 src/main/webapp/i18n/en/student.json
+ create mode 100644 src/main/webapp/i18n/en/subject.json
+ create mode 100644 src/main/webapp/i18n/hi/accountStatus.json
+ create mode 100644 src/main/webapp/i18n/hi/batch.json
+ create mode 100644 src/main/webapp/i18n/hi/classLog.json
+ create mode 100644 src/main/webapp/i18n/hi/classroom.json
+ create mode 100644 src/main/webapp/i18n/hi/course.json
+ create mode 100644 src/main/webapp/i18n/hi/division.json
+ create mode 100644 src/main/webapp/i18n/hi/employee.json
+ create mode 100644 src/main/webapp/i18n/hi/enquiry.json
+ create mode 100644 src/main/webapp/i18n/hi/enroll.json
+ create mode 100644 src/main/webapp/i18n/hi/followUp.json
+ create mode 100644 src/main/webapp/i18n/hi/jobType.json
+ create mode 100644 src/main/webapp/i18n/hi/logType.json
+ create mode 100644 src/main/webapp/i18n/hi/organization.json
+ create mode 100644 src/main/webapp/i18n/hi/payment.json
+ create mode 100644 src/main/webapp/i18n/hi/schedule.json
+ create mode 100644 src/main/webapp/i18n/hi/status.json
+ create mode 100644 src/main/webapp/i18n/hi/student.json
+ create mode 100644 src/main/webapp/i18n/hi/subject.json
+ create mode 100644 src/main/webapp/i18n/mr/accountStatus.json
+ create mode 100644 src/main/webapp/i18n/mr/batch.json
+ create mode 100644 src/main/webapp/i18n/mr/classLog.json
+ create mode 100644 src/main/webapp/i18n/mr/classroom.json
+ create mode 100644 src/main/webapp/i18n/mr/course.json
+ create mode 100644 src/main/webapp/i18n/mr/division.json
+ create mode 100644 src/main/webapp/i18n/mr/employee.json
+ create mode 100644 src/main/webapp/i18n/mr/enquiry.json
+ create mode 100644 src/main/webapp/i18n/mr/enroll.json
+ create mode 100644 src/main/webapp/i18n/mr/followUp.json
+ create mode 100644 src/main/webapp/i18n/mr/jobType.json
+ create mode 100644 src/main/webapp/i18n/mr/logType.json
+ create mode 100644 src/main/webapp/i18n/mr/organization.json
+ create mode 100644 src/main/webapp/i18n/mr/payment.json
+ create mode 100644 src/main/webapp/i18n/mr/schedule.json
+ create mode 100644 src/main/webapp/i18n/mr/status.json
+ create mode 100644 src/main/webapp/i18n/mr/student.json
+ create mode 100644 src/main/webapp/i18n/mr/subject.json
+ create mode 100644 src/main/webapp/i18n/ta/accountStatus.json
+ create mode 100644 src/main/webapp/i18n/ta/batch.json
+ create mode 100644 src/main/webapp/i18n/ta/classLog.json
+ create mode 100644 src/main/webapp/i18n/ta/classroom.json
+ create mode 100644 src/main/webapp/i18n/ta/course.json
+ create mode 100644 src/main/webapp/i18n/ta/division.json
+ create mode 100644 src/main/webapp/i18n/ta/employee.json
+ create mode 100644 src/main/webapp/i18n/ta/enquiry.json
+ create mode 100644 src/main/webapp/i18n/ta/enroll.json
+ create mode 100644 src/main/webapp/i18n/ta/followUp.json
+ create mode 100644 src/main/webapp/i18n/ta/jobType.json
+ create mode 100644 src/main/webapp/i18n/ta/logType.json
+ create mode 100644 src/main/webapp/i18n/ta/organization.json
+ create mode 100644 src/main/webapp/i18n/ta/payment.json
+ create mode 100644 src/main/webapp/i18n/ta/schedule.json
+ create mode 100644 src/main/webapp/i18n/ta/status.json
+ create mode 100644 src/main/webapp/i18n/ta/student.json
+ create mode 100644 src/main/webapp/i18n/ta/subject.json
+ create mode 100644 src/test/java/com/edu/web/rest/BatchResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/ClassLogResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/ClassroomResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/CourseResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/DivisionResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/EmployeeResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/EnquiryResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/EnrollResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/FollowUpResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/OrganizationResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/PaymentResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/ScheduleResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/StudentResourceIntTest.java
+ create mode 100644 src/test/java/com/edu/web/rest/SubjectResourceIntTest.java
+ create mode 100644 src/test/javascript/spec/app/entities/batch-bli/batch-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/batch-bli/batch-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/batch-bli/batch-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/batch-bli/batch-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/batch-bli/batch-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/class-log-bli/class-log-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/class-log-bli/class-log-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/class-log-bli/class-log-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/classroom-bli/classroom-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/classroom-bli/classroom-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/classroom-bli/classroom-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/course-bli/course-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/course-bli/course-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/course-bli/course-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/course-bli/course-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/course-bli/course-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/division-bli/division-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/division-bli/division-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/division-bli/division-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/division-bli/division-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/division-bli/division-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/employee-bli/employee-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/employee-bli/employee-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/employee-bli/employee-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/employee-bli/employee-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/employee-bli/employee-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enquiry-bli/enquiry-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enroll-bli/enroll-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enroll-bli/enroll-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/enroll-bli/enroll-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/follow-up-bli/follow-up-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/organization-bli/organization-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/organization-bli/organization-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/organization-bli/organization-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/organization-bli/organization-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/organization-bli/organization-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/payment-bli/payment-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/payment-bli/payment-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/payment-bli/payment-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/payment-bli/payment-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/payment-bli/payment-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/schedule-bli/schedule-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/schedule-bli/schedule-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/schedule-bli/schedule-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/student-bli/student-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/student-bli/student-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/student-bli/student-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/student-bli/student-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/student-bli/student-bli.service.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/subject-bli/subject-bli-delete-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/subject-bli/subject-bli-detail.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/subject-bli/subject-bli-dialog.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/subject-bli/subject-bli.component.spec.ts
+ create mode 100644 src/test/javascript/spec/app/entities/subject-bli/subject-bli.service.spec.ts
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ git remote add origin https://github.com/brajabp/edu.git
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ git push -u origin master
+Username for 'https://github.com': brajabp@gmail.com
+Password for 'https://brajabp@gmail.com@github.com': 
+Counting objects: 1066, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (1039/1039), done.
+Writing objects: 100% (1066/1066), 550.81 KiB | 0 bytes/s, done.
+Total 1066 (delta 514), reused 0 (delta 0)
+remote: Resolving deltas: 100% (514/514), done.
+To https://github.com/brajabp/edu.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+braja@braja-ubuntu:~/Desktop/Projects/JHipster/code/edu$ 
+
